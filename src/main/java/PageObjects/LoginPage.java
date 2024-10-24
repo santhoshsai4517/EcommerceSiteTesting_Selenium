@@ -47,6 +47,12 @@ public class LoginPage extends Utility {
 	@FindBy(className = "toast-title")
 	private WebElement successToast;
 	
+	@FindBy(xpath = "//input[@type='email']/parent::div/div/div")
+	private WebElement emailError;
+
+	@FindBy(xpath = "//input[@type='password']/parent::div/div/div")
+	private WebElement passwordError;
+	
 	public ProductsPage loginApplication(String email,String pass) {
 		userEmail.sendKeys(email);
 		password.sendKeys(pass);
@@ -86,6 +92,16 @@ public class LoginPage extends Utility {
 	public String getSuccessText() {
 		waitForWebElementToAppear(successToast);
 		return successToast.getText();
+	}
+	
+	public String getEmailErrorText() {
+		waitForWebElementToAppear(emailError);
+		return emailError.getText();
+	}
+	
+	public String getPasswordErrorText() {
+		waitForWebElementToAppear(passwordError);
+		return passwordError.getText();
 	}
 }
 

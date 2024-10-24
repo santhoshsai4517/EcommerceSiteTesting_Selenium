@@ -27,6 +27,24 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 	public void error_message_is_displayed(String message) {
 		Assert.assertEquals(login.getErrorText(), message);
 	}
+	
+	@When("Logged in with no login details")
+	public void logged_in_with_no_login_details() {
+	   login.loginApplication("", "");
+	}
+	
+	@Then("{string} and {string} error message is displayed")
+	public void error_message_is_displayed(String message,String message1) {
+		Assert.assertEquals(login.getEmailErrorText(), message);
+		Assert.assertEquals(login.getPasswordErrorText(), message1);
+	}
+	
+	@Then("{string} invalid message is displayed")
+	public void invalid_message_is_displayed(String message) {
+		Assert.assertEquals(login.getEmailErrorText(), message);
+	}
+	
+	
 
 	@After
 	public void afterScenario() {
