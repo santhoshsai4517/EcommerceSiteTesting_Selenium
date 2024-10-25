@@ -1,6 +1,7 @@
 package PageObjects;
 
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -102,6 +103,18 @@ public class LoginPage extends Utility {
 	public String getPasswordErrorText() {
 		waitForWebElementToAppear(passwordError);
 		return passwordError.getText();
+	}
+
+	public boolean checkError() {
+		
+		boolean present;
+		try {
+		   errorToast.isDisplayed();
+		   present = true;
+		} catch (NoSuchElementException e) {
+		   present = false;
+		}
+		return present;
 	}
 }
 

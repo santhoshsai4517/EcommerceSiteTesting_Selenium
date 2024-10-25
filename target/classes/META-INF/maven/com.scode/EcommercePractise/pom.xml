@@ -23,6 +23,12 @@
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20230618</version> <!-- Use the latest version -->
+		</dependency>
+
+		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.23.0</version>
@@ -55,7 +61,6 @@
 		</dependency>
 
 
-		
 	</dependencies>
 
 	<build>

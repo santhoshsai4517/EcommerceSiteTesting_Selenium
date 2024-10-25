@@ -18,12 +18,13 @@ import io.cucumber.java.After;
 
 public class BaseTest {
 
-	public WebDriver driver;
+	public ChromeDriver driver;
 	public LoginPage login;
 
-	public WebDriver initializeDriver() throws FileNotFoundException, IOException {
+	public ChromeDriver initializeDriver() throws FileNotFoundException, IOException {
 
 		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

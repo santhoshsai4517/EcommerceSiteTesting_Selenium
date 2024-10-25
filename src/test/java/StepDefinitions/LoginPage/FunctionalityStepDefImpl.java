@@ -2,7 +2,14 @@ package StepDefinitions.LoginPage;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Optional;
 
+import org.json.JSONObject;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v126.network.Network;
+import org.openqa.selenium.devtools.v126.network.model.Request;
+import org.openqa.selenium.devtools.v126.network.model.RequestId;
+import org.openqa.selenium.devtools.v126.network.model.Response;
 import org.testng.Assert;
 
 import BaseTest.BaseTest;
@@ -56,12 +63,34 @@ public class FunctionalityStepDefImpl extends BaseTest {
 	
 	@When("^Logged in with username (.+) and password (.+)$")
 	public void logged_in_with_username_and_password(String username,String password) {
+	    DevTools devTools = driver.getDevTools();
+		devTools.createSession();
+		devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+	    devTools.addListener(Network.requestWillBeSent(), request ->
+
+		{
+			Request req = request.getRequest();
+			if(req.getUrl().contains("auth")) {
+				RequestId requestId = request.getRequestId();
+				String requestPayload = devTools.send(Network.getRequestPostData(requestId));
+				 System.out.println(requestPayload);
+				 JSONObject jsonObject = new JSONObject(requestPayload);
+				 Assert.assertEquals(jsonObject.getString("userEmail"), username);
+				 Assert.assertEquals(jsonObject.getString("userPaassword"), password);
+			}
+			
+
+		});
+
 	    productspage = login.loginApplication(username, password);
 	}
 	@Then("{string} message is displayed and {string} title is visible")
 	public void message_is_displayed_and_title_is_visible(String message, String message2) {
 	    Assert.assertEquals(login.getSuccessText(), message);
 	    Assert.assertEquals(productspage.getTitleText(), message2);
+	    
+	    
+
 	}
 	
 	@After

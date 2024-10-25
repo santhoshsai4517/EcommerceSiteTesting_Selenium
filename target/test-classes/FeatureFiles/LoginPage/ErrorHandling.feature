@@ -12,6 +12,27 @@ Feature: Login error handling
       | santhoshsai4517@gmail.com  | 151Fa04124@457   |
       | santhoshsai4521223117@gmail.com  | 151Fa04124@4517   |
       
+  @ErrorHandling
+  Scenario Outline: Login page functionality
+    Given I landed on ECommerece page and logging in 
+    When API payload chnaged Logged in with wrong username <username> and password <password>
+    Then "Incorrect email or password." error message is not displayed
+
+    Examples: 
+      |      username              | password         |
+      | santhoshsai4517@gmail.com  | 151Fa04124@4517   |
+      
+  @ErrorHandling
+  Scenario Outline: Login page functionality
+    Given I landed on ECommerece page and logging in 
+    When Api call is failed Logged in with wrong username <username> and password <password>
+    Then "Unknown error occured" error message is displayed
+
+    Examples: 
+      |      username              | password         |
+      | santhoshsai4517@gmail.com  | 151Fa04124@457   |
+      | santhoshsai4521223117@gmail.com  | 151Fa04124@4517   |
+      
 	@ErrorHandling
   Scenario Outline: Login page functionality
     Given I landed on ECommerece page and logging in 
