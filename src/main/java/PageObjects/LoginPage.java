@@ -54,6 +54,9 @@ public class LoginPage extends Utility {
 	@FindBy(xpath = "//input[@type='password']/parent::div/div/div")
 	private WebElement passwordError;
 	
+	@FindBy(className = "ng-trigger")
+	private WebElement passwordUpdateText;
+	
 	public ProductsPage loginApplication(String email,String pass) {
 		userEmail.sendKeys(email);
 		password.sendKeys(pass);
@@ -115,6 +118,11 @@ public class LoginPage extends Utility {
 		   present = false;
 		}
 		return present;
+	}
+	
+	public String getPasswordUpdateText() {
+		waitForWebElementToAppear(passwordUpdateText);
+		return passwordUpdateText.getText();
 	}
 }
 
