@@ -1,5 +1,5 @@
 Utility\Hooks.class
+BaseTest\BaseTest.class
 StepDefinitions\LoginPage\FunctionalityStepDefImpl.class
 TestNGTestRunner.class
-BaseTest\BaseTest.class
 StepDefinitions\LoginPage\ErrorHandlingStepDefImpl.class

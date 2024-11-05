@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>21/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>42/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Oct 27 14:31:57 IST 2024</td>
+<td>Started on:</td><td>Tue Nov 05 15:04:01 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>73 seconds (73155 ms)</td>
+<tr><td>Total time:</td><td>402 seconds (402478 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,69 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides password length less than 8 and passowrd error is displayed", "Register page error handling"</td>
+<td><div><pre>java.lang.AssertionError: expected [Password must be 8 Character Long!] but found []
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Password must be 8 Character Long! password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace656650448", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace656650448'><pre>java.lang.AssertionError: expected [Password must be 8 Character Long!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Password must be 8 Character Long! password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+</pre></div></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides password length less than 8 and passowrd error is displayed", "Register page error handling"</td>
+<td><div><pre>java.lang.AssertionError: expected [Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small] but found []
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace608616031", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace608616031'><pre>java.lang.AssertionError: expected [Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+</pre></div></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add products to cart", "Products page functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Product Added To Cart] but found []
+	at StepDefinitions.ProductsPage.FunctionalityStepDefImpl.user_clciks_on_add_cart_button_on_a_product(FunctionalityStepDefImpl.java:223)
+	at ✽.User clciks on add cart button on a product(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/ProductsPage/Functionality.feature:36)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace264146899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace264146899'><pre>java.lang.AssertionError: expected [Product Added To Cart] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at StepDefinitions.ProductsPage.FunctionalityStepDefImpl.user_clciks_on_add_cart_button_on_a_product(FunctionalityStepDefImpl.java:223)
+	at ✽.User clciks on add cart button on a product(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/ProductsPage/Functionality.feature:36)
+</pre></div></td>
+<td>15</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,84 +139,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Not found", "Forgot Password Page error handling"</td>
-<td></td>
-<td>3</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login functionality"</td>
 <td></td>
-<td>3</td>
+<td>8</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API Payload changedInvalid email", "Forgot Password Page error handling"</td>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Products page error handling no products are displayed due to filters", "Products page error handling"</td>
 <td></td>
-<td>2</td>
+<td>13</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Min max price filter", "Products page functionality"</td>
 <td></td>
-<td>2</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Forgot Password Page functionality", "Forgot Password Page functionality"</td>
-<td></td>
-<td>7</td>
+<td>13</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Password mismatch", "Forgot Password Page error handling"</td>
 <td></td>
-<td>2</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
-<td></td>
-<td>2</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
-<td></td>
-<td>3</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty form", "Forgot Password Page error handling"</td>
-<td></td>
-<td>4</td>
+<td>7</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Forgot Password Page functionality", "Forgot Password Page functionality"</td>
 <td></td>
-<td>2</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login functionality"</td>
-<td></td>
-<td>2</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login functionality"</td>
-<td></td>
-<td>2</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid email", "Forgot Password Page error handling"</td>
-<td></td>
-<td>3</td>
+<td>10</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
 <td></td>
-<td>3</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Forgot Password Page functionality", "Forgot Password Page functionality"</td>
-<td></td>
-<td>3</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
-<td></td>
-<td>2</td>
+<td>12</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
@@ -161,24 +174,179 @@ function toggleAllBoxes() {
 <td>7</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Forgot Password Page functionality", "Forgot Password Page functionality"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search filter", "Products page functionality"</td>
+<td></td>
+<td>12</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User clicks on login page link in register page", "Register page functionality"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides registered email and registerd user is displayed", "Register page error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty form", "Forgot Password Page error handling"</td>
+<td></td>
+<td>13</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "SignOut", "Products page functionality"</td>
+<td></td>
+<td>9</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login functionality"</td>
 <td></td>
-<td>2</td>
+<td>9</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Not found", "Forgot Password Page error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Home button", "Products page functionality"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid email", "Forgot Password Page error handling"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API Payload changedInvalid email", "Forgot Password Page error handling"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides correct details and api is failed and error is displayed", "Register page error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides all correct details and user is registered successfully", "Register page functionality"</td>
+<td></td>
+<td>13</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API intercept failed", "Forgot Password Page error handling"</td>
 <td></td>
-<td>2</td>
-<td>TestNGTestRunner@481a996b</td></tr>
-<tr>
-<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
-<td></td>
-<td>3</td>
+<td>8</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 <tr>
 <td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login functionality"</td>
 <td></td>
-<td>2</td>
+<td>5</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Orders button", "Products page functionality"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides mobile number with less than 10 digits and mobile error is displayed", "Register page error handling"</td>
+<td></td>
+<td>9</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login functionality"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Products page error handling no products are displayed due to api failure", "Products page error handling"</td>
+<td></td>
+<td>12</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides mobile number with chars and mobile error is displayed", "Register page error handling"</td>
+<td></td>
+<td>9</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Forgot Password Page functionality", "Forgot Password Page functionality"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User submits empty registration form", "Register page error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Categories filter", "Products page functionality"</td>
+<td></td>
+<td>13</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides mismatch password and password mismatch error is displayed", "Register page error handling"</td>
+<td></td>
+<td>8</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart button", "Products page functionality"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Products page functionality", "Products page functionality"</td>
+<td></td>
+<td>12</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Products page error handling add to cart api is failed", "Products page error handling"</td>
+<td></td>
+<td>12</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login functionality"</td>
+<td></td>
+<td>6</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides inalid email and invalid email error is displayed", "Register page error handling"</td>
+<td></td>
+<td>7</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User provides registered email and registerd user is displayed", "Register page error handling"</td>
+<td></td>
+<td>8</td>
+<td>TestNGTestRunner@481a996b</td></tr>
+<tr>
+<td title='TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page functionality", "Login error handling"</td>
+<td></td>
+<td>6</td>
 <td>TestNGTestRunner@481a996b</td></tr>
 </table><p>
 </body>

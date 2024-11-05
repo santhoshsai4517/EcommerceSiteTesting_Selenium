@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">21 methods,   21 passed</span>
+                    <span class="method-stats">45 methods, 3 failed,   42 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides password length less than 8 and passowrd error is displayed&quot;, &quot;Register page error ha...)">runScenario("User provides password length less than 8 and passowrd error is displayed", "Register page error ha...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides password length less than 8 and passowrd error is displayed&quot;, &quot;Register page error ha...)">runScenario("User provides password length less than 8 and passowrd error is displayed", "Register page error ha...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add products to cart&quot;, &quot;Products page functionality&quot;)">runScenario("Add products to cart", "Products page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,27 +127,17 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User Not found&quot;, &quot;Forgot Password Page error handling&quot;)">runScenario("User Not found", "Forgot Password Page error handling")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">runScenario("Login page functionality", "Login functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API Payload changedInvalid email&quot;, &quot;Forgot Password Page error handling&quot;)">runScenario("API Payload changedInvalid email", "Forgot Password Page error handling")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Products page error handling no products are displayed due to filters&quot;, &quot;Products page error handli...)">runScenario("Products page error handling no products are displayed due to filters", "Products page error handli...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">runScenario("Login page functionality", "Login error handling")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">runScenario("Forgot Password Page functionality", "Forgot Password Page functionality")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Min max price filter&quot;, &quot;Products page functionality&quot;)">runScenario("Min max price filter", "Products page functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -133,12 +147,37 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">runScenario("Forgot Password Page functionality", "Forgot Password Page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">runScenario("Login page functionality", "Login error handling")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">runScenario("Login page functionality", "Login error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">runScenario("Forgot Password Page functionality", "Forgot Password Page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search filter&quot;, &quot;Products page functionality&quot;)">runScenario("Search filter", "Products page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User clicks on login page link in register page&quot;, &quot;Register page functionality&quot;)">runScenario("User clicks on login page link in register page", "Register page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides registered email and registerd user is displayed&quot;, &quot;Register page error handling&quot;)">runScenario("User provides registered email and registerd user is displayed", "Register page error handling")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,7 +187,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">runScenario("Forgot Password Page functionality", "Forgot Password Page functionality")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;SignOut&quot;, &quot;Products page functionality&quot;)">runScenario("SignOut", "Products page functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -158,7 +197,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">runScenario("Login page functionality", "Login functionality")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User Not found&quot;, &quot;Forgot Password Page error handling&quot;)">runScenario("User Not found", "Forgot Password Page error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Home button&quot;, &quot;Products page functionality&quot;)">runScenario("Home button", "Products page functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,7 +212,57 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API Payload changedInvalid email&quot;, &quot;Forgot Password Page error handling&quot;)">runScenario("API Payload changedInvalid email", "Forgot Password Page error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides correct details and api is failed and error is displayed&quot;, &quot;Register page error handl...)">runScenario("User provides correct details and api is failed and error is displayed", "Register page error handl...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides all correct details and user is registered successfully&quot;, &quot;Register page functionalit...)">runScenario("User provides all correct details and user is registered successfully", "Register page functionalit...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API intercept failed&quot;, &quot;Forgot Password Page error handling&quot;)">runScenario("API intercept failed", "Forgot Password Page error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">runScenario("Login page functionality", "Login functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Orders button&quot;, &quot;Products page functionality&quot;)">runScenario("Orders button", "Products page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides mobile number with less than 10 digits and mobile error is displayed&quot;, &quot;Register page...)">runScenario("User provides mobile number with less than 10 digits and mobile error is displayed", "Register page...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">runScenario("Login page functionality", "Login error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">runScenario("Login page functionality", "Login functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Products page error handling no products are displayed due to api failure&quot;, &quot;Products page error ha...)">runScenario("Products page error handling no products are displayed due to api failure", "Products page error ha...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides mobile number with chars and mobile error is displayed&quot;, &quot;Register page error handlin...)">runScenario("User provides mobile number with chars and mobile error is displayed", "Register page error handlin...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -188,22 +282,57 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">runScenario("Login page functionality", "Login functionality")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API intercept failed&quot;, &quot;Forgot Password Page error handling&quot;)">runScenario("API intercept failed", "Forgot Password Page error handling")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">runScenario("Login page functionality", "Login error handling")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User submits empty registration form&quot;, &quot;Register page error handling&quot;)">runScenario("User submits empty registration form", "Register page error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Categories filter&quot;, &quot;Products page functionality&quot;)">runScenario("Categories filter", "Products page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides mismatch password and password mismatch error is displayed&quot;, &quot;Register page error han...)">runScenario("User provides mismatch password and password mismatch error is displayed", "Register page error han...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Cart button&quot;, &quot;Products page functionality&quot;)">runScenario("Cart button", "Products page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Products page functionality&quot;, &quot;Products page functionality&quot;)">runScenario("Products page functionality", "Products page functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Products page error handling add to cart api is failed&quot;, &quot;Products page error handling&quot;)">runScenario("Products page error handling add to cart api is failed", "Products page error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">runScenario("Login page functionality", "Login functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides inalid email and invalid email error is displayed&quot;, &quot;Register page error handling&quot;)">runScenario("User provides inalid email and invalid email error is displayed", "Register page error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User provides registered email and registerd user is displayed&quot;, &quot;Register page error handling&quot;)">runScenario("User provides registered email and registerd user is displayed", "Register page error handling")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">runScenario("Login page functionality", "Login error handling")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -218,22 +347,65 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestNGTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides password length less than 8 and passowrd error is displayed&quot;, &quot;Register page error ha...)">
+                  </a> <!-- runScenario("User provides password length less than 8 and passowrd error is displayed", "Register page error ha...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides password length less than 8 and passowrd error is displayed","Register page error handling")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Password must be 8 Character Long!] but found []
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Password must be 8 Character Long! password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides password length less than 8 and passowrd error is displayed&quot;, &quot;Register page error ha...)">
+                  </a> <!-- runScenario("User provides password length less than 8 and passowrd error is displayed", "Register page error ha...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides password length less than 8 and passowrd error is displayed","Register page error handling")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small] but found []
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add products to cart&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Add products to cart", "Products page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add products to cart","Products page functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Product Added To Cart] but found []
+	at StepDefinitions.ProductsPage.FunctionalityStepDefImpl.user_clciks_on_add_cart_button_on_a_product(FunctionalityStepDefImpl.java:223)
+	at ✽.User clciks on add cart button on a product(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/ProductsPage/Functionality.feature:36)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">TestNGTestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;User Not found&quot;, &quot;Forgot Password Page error handling&quot;)">
-                  </a> <!-- runScenario("User Not found", "Forgot Password Page error handling") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("User Not found","Forgot Password Page error handling")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">
@@ -246,30 +418,20 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;API Payload changedInvalid email&quot;, &quot;Forgot Password Page error handling&quot;)">
-                  </a> <!-- runScenario("API Payload changedInvalid email", "Forgot Password Page error handling") -->
+                  <a name="runScenario(&quot;Products page error handling no products are displayed due to filters&quot;, &quot;Products page error handli...)">
+                  </a> <!-- runScenario("Products page error handling no products are displayed due to filters", "Products page error handli...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("API Payload changedInvalid email","Forgot Password Page error handling")</span>
+                  <span class="parameters">("Products page error handling no products are displayed due to filters","Products page error handling")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">
-                  </a> <!-- runScenario("Login page functionality", "Login error handling") -->
+                  <a name="runScenario(&quot;Min max price filter&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Min max price filter", "Products page functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login page functionality","Login error handling")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">
-                  </a> <!-- runScenario("Forgot Password Page functionality", "Forgot Password Page functionality") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Forgot Password Page functionality","Forgot Password Page functionality")</span>
+                  <span class="parameters">("Min max price filter","Products page functionality")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -286,6 +448,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">
+                  </a> <!-- runScenario("Forgot Password Page functionality", "Forgot Password Page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Forgot Password Page functionality","Forgot Password Page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">
                   </a> <!-- runScenario("Login page functionality", "Login error handling") -->
                   <span class="method-name">runScenario</span>
@@ -300,6 +472,46 @@
                   </a> <!-- runScenario("Login page functionality", "Login error handling") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Login page functionality","Login error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">
+                  </a> <!-- runScenario("Forgot Password Page functionality", "Forgot Password Page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Forgot Password Page functionality","Forgot Password Page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search filter&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Search filter", "Products page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search filter","Products page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User clicks on login page link in register page&quot;, &quot;Register page functionality&quot;)">
+                  </a> <!-- runScenario("User clicks on login page link in register page", "Register page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User clicks on login page link in register page","Register page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides registered email and registerd user is displayed&quot;, &quot;Register page error handling&quot;)">
+                  </a> <!-- runScenario("User provides registered email and registerd user is displayed", "Register page error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides registered email and registerd user is displayed","Register page error handling")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -316,10 +528,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Forgot Password Page functionality&quot;, &quot;Forgot Password Page functionality&quot;)">
-                  </a> <!-- runScenario("Forgot Password Page functionality", "Forgot Password Page functionality") -->
+                  <a name="runScenario(&quot;SignOut&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("SignOut", "Products page functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Forgot Password Page functionality","Forgot Password Page functionality")</span>
+                  <span class="parameters">("SignOut","Products page functionality")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -336,10 +548,20 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">
-                  </a> <!-- runScenario("Login page functionality", "Login functionality") -->
+                  <a name="runScenario(&quot;User Not found&quot;, &quot;Forgot Password Page error handling&quot;)">
+                  </a> <!-- runScenario("User Not found", "Forgot Password Page error handling") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login page functionality","Login functionality")</span>
+                  <span class="parameters">("User Not found","Forgot Password Page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Home button&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Home button", "Products page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Home button","Products page functionality")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -356,10 +578,110 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;API Payload changedInvalid email&quot;, &quot;Forgot Password Page error handling&quot;)">
+                  </a> <!-- runScenario("API Payload changedInvalid email", "Forgot Password Page error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("API Payload changedInvalid email","Forgot Password Page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides correct details and api is failed and error is displayed&quot;, &quot;Register page error handl...)">
+                  </a> <!-- runScenario("User provides correct details and api is failed and error is displayed", "Register page error handl...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides correct details and api is failed and error is displayed","Register page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides all correct details and user is registered successfully&quot;, &quot;Register page functionalit...)">
+                  </a> <!-- runScenario("User provides all correct details and user is registered successfully", "Register page functionalit...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides all correct details and user is registered successfully","Register page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;API intercept failed&quot;, &quot;Forgot Password Page error handling&quot;)">
+                  </a> <!-- runScenario("API intercept failed", "Forgot Password Page error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("API intercept failed","Forgot Password Page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">
+                  </a> <!-- runScenario("Login page functionality", "Login functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login page functionality","Login functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Orders button&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Orders button", "Products page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Orders button","Products page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides mobile number with less than 10 digits and mobile error is displayed&quot;, &quot;Register page...)">
+                  </a> <!-- runScenario("User provides mobile number with less than 10 digits and mobile error is displayed", "Register page...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides mobile number with less than 10 digits and mobile error is displayed","Register page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">
                   </a> <!-- runScenario("Login page functionality", "Login error handling") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Login page functionality","Login error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">
+                  </a> <!-- runScenario("Login page functionality", "Login functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login page functionality","Login functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Products page error handling no products are displayed due to api failure&quot;, &quot;Products page error ha...)">
+                  </a> <!-- runScenario("Products page error handling no products are displayed due to api failure", "Products page error ha...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Products page error handling no products are displayed due to api failure","Products page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides mobile number with chars and mobile error is displayed&quot;, &quot;Register page error handlin...)">
+                  </a> <!-- runScenario("User provides mobile number with chars and mobile error is displayed", "Register page error handlin...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides mobile number with chars and mobile error is displayed","Register page error handling")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -396,26 +718,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">
-                  </a> <!-- runScenario("Login page functionality", "Login functionality") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login page functionality","Login functionality")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;API intercept failed&quot;, &quot;Forgot Password Page error handling&quot;)">
-                  </a> <!-- runScenario("API intercept failed", "Forgot Password Page error handling") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("API intercept failed","Forgot Password Page error handling")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">
                   </a> <!-- runScenario("Login page functionality", "Login error handling") -->
                   <span class="method-name">runScenario</span>
@@ -426,10 +728,100 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;User submits empty registration form&quot;, &quot;Register page error handling&quot;)">
+                  </a> <!-- runScenario("User submits empty registration form", "Register page error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User submits empty registration form","Register page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Categories filter&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Categories filter", "Products page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Categories filter","Products page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides mismatch password and password mismatch error is displayed&quot;, &quot;Register page error han...)">
+                  </a> <!-- runScenario("User provides mismatch password and password mismatch error is displayed", "Register page error han...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides mismatch password and password mismatch error is displayed","Register page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Cart button&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Cart button", "Products page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Cart button","Products page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Products page functionality&quot;, &quot;Products page functionality&quot;)">
+                  </a> <!-- runScenario("Products page functionality", "Products page functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Products page functionality","Products page functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Products page error handling add to cart api is failed&quot;, &quot;Products page error handling&quot;)">
+                  </a> <!-- runScenario("Products page error handling add to cart api is failed", "Products page error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Products page error handling add to cart api is failed","Products page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login functionality&quot;)">
                   </a> <!-- runScenario("Login page functionality", "Login functionality") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Login page functionality","Login functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides inalid email and invalid email error is displayed&quot;, &quot;Register page error handling&quot;)">
+                  </a> <!-- runScenario("User provides inalid email and invalid email error is displayed", "Register page error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides inalid email and invalid email error is displayed","Register page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User provides registered email and registerd user is displayed&quot;, &quot;Register page error handling&quot;)">
+                  </a> <!-- runScenario("User provides registered email and registerd user is displayed", "Register page error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User provides registered email and registerd user is displayed","Register page error handling")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login page functionality&quot;, &quot;Login error handling&quot;)">
+                  </a> <!-- runScenario("Login page functionality", "Login error handling") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login page functionality","Login error handling")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -496,96 +888,192 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(21);
+data.addRows(45);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'TestNGTestRunner')
-data.setCell(0, 3, 7704);
+data.setCell(0, 3, 15834);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'TestNGTestRunner')
-data.setCell(1, 3, 7378);
+data.setCell(1, 3, 13616);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'TestNGTestRunner')
-data.setCell(2, 3, 4347);
+data.setCell(2, 3, 13409);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'TestNGTestRunner')
-data.setCell(3, 3, 3575);
+data.setCell(3, 3, 13364);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'TestNGTestRunner')
-data.setCell(4, 3, 3302);
+data.setCell(4, 3, 13281);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'runScenario')
 data.setCell(5, 2, 'TestNGTestRunner')
-data.setCell(5, 3, 3254);
+data.setCell(5, 3, 13127);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'runScenario')
 data.setCell(6, 2, 'TestNGTestRunner')
-data.setCell(6, 3, 3175);
+data.setCell(6, 3, 12764);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'runScenario')
 data.setCell(7, 2, 'TestNGTestRunner')
-data.setCell(7, 3, 3045);
+data.setCell(7, 3, 12643);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'runScenario')
 data.setCell(8, 2, 'TestNGTestRunner')
-data.setCell(8, 3, 3024);
+data.setCell(8, 3, 12618);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'runScenario')
 data.setCell(9, 2, 'TestNGTestRunner')
-data.setCell(9, 3, 3007);
+data.setCell(9, 3, 12504);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'runScenario')
 data.setCell(10, 2, 'TestNGTestRunner')
-data.setCell(10, 3, 2991);
+data.setCell(10, 3, 12174);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'runScenario')
 data.setCell(11, 2, 'TestNGTestRunner')
-data.setCell(11, 3, 2984);
+data.setCell(11, 3, 10706);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'runScenario')
 data.setCell(12, 2, 'TestNGTestRunner')
-data.setCell(12, 3, 2933);
+data.setCell(12, 3, 9404);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'runScenario')
 data.setCell(13, 2, 'TestNGTestRunner')
-data.setCell(13, 3, 2887);
+data.setCell(13, 3, 9281);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'runScenario')
 data.setCell(14, 2, 'TestNGTestRunner')
-data.setCell(14, 3, 2881);
+data.setCell(14, 3, 9220);
 data.setCell(15, 0, 15)
 data.setCell(15, 1, 'runScenario')
 data.setCell(15, 2, 'TestNGTestRunner')
-data.setCell(15, 3, 2866);
+data.setCell(15, 3, 9159);
 data.setCell(16, 0, 16)
 data.setCell(16, 1, 'runScenario')
 data.setCell(16, 2, 'TestNGTestRunner')
-data.setCell(16, 3, 2834);
+data.setCell(16, 3, 8615);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'runScenario')
 data.setCell(17, 2, 'TestNGTestRunner')
-data.setCell(17, 3, 2793);
+data.setCell(17, 3, 8465);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'runScenario')
 data.setCell(18, 2, 'TestNGTestRunner')
-data.setCell(18, 3, 2675);
+data.setCell(18, 3, 8361);
 data.setCell(19, 0, 19)
 data.setCell(19, 1, 'runScenario')
 data.setCell(19, 2, 'TestNGTestRunner')
-data.setCell(19, 3, 2664);
+data.setCell(19, 3, 8169);
 data.setCell(20, 0, 20)
 data.setCell(20, 1, 'runScenario')
 data.setCell(20, 2, 'TestNGTestRunner')
-data.setCell(20, 3, 2576);
+data.setCell(20, 3, 7904);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'TestNGTestRunner')
+data.setCell(21, 3, 7831);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'TestNGTestRunner')
+data.setCell(22, 3, 7776);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'TestNGTestRunner')
+data.setCell(23, 3, 7671);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'runScenario')
+data.setCell(24, 2, 'TestNGTestRunner')
+data.setCell(24, 3, 7643);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'runScenario')
+data.setCell(25, 2, 'TestNGTestRunner')
+data.setCell(25, 3, 7531);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'runScenario')
+data.setCell(26, 2, 'TestNGTestRunner')
+data.setCell(26, 3, 7528);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'runScenario')
+data.setCell(27, 2, 'TestNGTestRunner')
+data.setCell(27, 3, 7362);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'runScenario')
+data.setCell(28, 2, 'TestNGTestRunner')
+data.setCell(28, 3, 7337);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'runScenario')
+data.setCell(29, 2, 'TestNGTestRunner')
+data.setCell(29, 3, 7273);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'runScenario')
+data.setCell(30, 2, 'TestNGTestRunner')
+data.setCell(30, 3, 7200);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'runScenario')
+data.setCell(31, 2, 'TestNGTestRunner')
+data.setCell(31, 3, 7128);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'runScenario')
+data.setCell(32, 2, 'TestNGTestRunner')
+data.setCell(32, 3, 7077);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'runScenario')
+data.setCell(33, 2, 'TestNGTestRunner')
+data.setCell(33, 3, 6862);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'runScenario')
+data.setCell(34, 2, 'TestNGTestRunner')
+data.setCell(34, 3, 6824);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'runScenario')
+data.setCell(35, 2, 'TestNGTestRunner')
+data.setCell(35, 3, 6768);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'runScenario')
+data.setCell(36, 2, 'TestNGTestRunner')
+data.setCell(36, 3, 6731);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'runScenario')
+data.setCell(37, 2, 'TestNGTestRunner')
+data.setCell(37, 3, 6606);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'runScenario')
+data.setCell(38, 2, 'TestNGTestRunner')
+data.setCell(38, 3, 6581);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'runScenario')
+data.setCell(39, 2, 'TestNGTestRunner')
+data.setCell(39, 3, 6578);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'runScenario')
+data.setCell(40, 2, 'TestNGTestRunner')
+data.setCell(40, 3, 6576);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'runScenario')
+data.setCell(41, 2, 'TestNGTestRunner')
+data.setCell(41, 3, 6354);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'runScenario')
+data.setCell(42, 2, 'TestNGTestRunner')
+data.setCell(42, 3, 6327);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'runScenario')
+data.setCell(43, 2, 'TestNGTestRunner')
+data.setCell(43, 3, 6017);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'runScenario')
+data.setCell(44, 2, 'TestNGTestRunner')
+data.setCell(44, 3, 5915);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -613,96 +1101,198 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">TestNGTestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@3dc39459)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@3423f353)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Empty form", "Forgot Password Page error handling")</span>
-                <span class="method-start">214 ms</span>
+                <span class="method-start">290 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Invalid email", "Forgot Password Page error handling")</span>
-                <span class="method-start">4564 ms</span>
+                <span class="method-start">13909 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Password mismatch", "Forgot Password Page error handling")</span>
-                <span class="method-start">7740 ms</span>
+                <span class="method-start">20733 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("User Not found", "Forgot Password Page error handling")</span>
-                <span class="method-start">10628 ms</span>
+                <span class="method-start">27934 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("API intercept failed", "Forgot Password Page error handling")</span>
-                <span class="method-start">13931 ms</span>
+                <span class="method-start">35466 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("API Payload changedInvalid email", "Forgot Password Page error handling")</span>
-                <span class="method-start">16798 ms</span>
+                <span class="method-start">43636 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Forgot Password Page functionality", "Forgot Password Page functionality")</span>
-                <span class="method-start">19681 ms</span>
+                <span class="method-start">50244 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Forgot Password Page functionality", "Forgot Password Page functionality")</span>
-                <span class="method-start">22935 ms</span>
+                <span class="method-start">57013 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Forgot Password Page functionality", "Forgot Password Page functionality")</span>
-                <span class="method-start">25512 ms</span>
+                <span class="method-start">63368 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login error handling")</span>
-                <span class="method-start">32892 ms</span>
+                <span class="method-start">74074 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login error handling")</span>
-                <span class="method-start">35885 ms</span>
+                <span class="method-start">80653 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login error handling")</span>
-                <span class="method-start">38819 ms</span>
+                <span class="method-start">88016 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login error handling")</span>
-                <span class="method-start">46524 ms</span>
+                <span class="method-start">100191 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login error handling")</span>
-                <span class="method-start">49548 ms</span>
+                <span class="method-start">107862 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login error handling")</span>
-                <span class="method-start">52594 ms</span>
+                <span class="method-start">115694 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login error handling")</span>
-                <span class="method-start">56170 ms</span>
+                <span class="method-start">122271 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login functionality")</span>
-                <span class="method-start">59155 ms</span>
+                <span class="method-start">129349 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login functionality")</span>
-                <span class="method-start">61949 ms</span>
+                <span class="method-start">135931 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login functionality")</span>
-                <span class="method-start">64784 ms</span>
+                <span class="method-start">144397 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login functionality")</span>
-                <span class="method-start">67448 ms</span>
+                <span class="method-start">150415 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login page functionality", "Login functionality")</span>
-                <span class="method-start">70123 ms</span>
+                <span class="method-start">156330 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Products page error handling no products are displayed due to api failure", "Products page error ha...)</span>
+                <span class="method-start">165736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Products page error handling no products are displayed due to filters", "Products page error handli...)</span>
+                <span class="method-start">178355 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Products page error handling add to cart api is failed", "Products page error handling")</span>
+                <span class="method-start">191637 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Products page functionality", "Products page functionality")</span>
+                <span class="method-start">204142 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Cart button", "Products page functionality")</span>
+                <span class="method-start">216786 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Home button", "Products page functionality")</span>
+                <span class="method-start">224430 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Orders button", "Products page functionality")</span>
+                <span class="method-start">231162 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("SignOut", "Products page functionality")</span>
+                <span class="method-start">238027 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Add products to cart", "Products page functionality")</span>
+                <span class="method-start">247186 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search filter", "Products page functionality")</span>
+                <span class="method-start">263023 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Min max price filter", "Products page functionality")</span>
+                <span class="method-start">275788 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Categories filter", "Products page functionality")</span>
+                <span class="method-start">288916 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User submits empty registration form", "Register page error handling")</span>
+                <span class="method-start">302281 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides inalid email and invalid email error is displayed", "Register page error handling")</span>
+                <span class="method-start">309554 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides mismatch password and password mismatch error is displayed", "Register page error han...)</span>
+                <span class="method-start">317083 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides mobile number with chars and mobile error is displayed", "Register page error handlin...)</span>
+                <span class="method-start">325445 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides mobile number with less than 10 digits and mobile error is displayed", "Register page...)</span>
+                <span class="method-start">334668 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides registered email and registerd user is displayed", "Register page error handling")</span>
+                <span class="method-start">343950 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User provides password length less than 8 and passowrd error is displayed", "Register page error ha...)</span>
+                <span class="method-start">352566 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User provides password length less than 8 and passowrd error is displayed", "Register page error ha...)</span>
+                <span class="method-start">359904 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides correct details and api is failed and error is displayed", "Register page error handl...)</span>
+                <span class="method-start">367809 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides registered email and registerd user is displayed", "Register page error handling")</span>
+                <span class="method-start">375587 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User clicks on login page link in register page", "Register page functionality")</span>
+                <span class="method-start">382715 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User provides all correct details and user is registered successfully", "Register page functionalit...)</span>
+                <span class="method-start">389044 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">73132 ms</span>
+                <span class="method-start">402457 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

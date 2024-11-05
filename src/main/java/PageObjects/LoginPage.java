@@ -57,6 +57,9 @@ public class LoginPage extends Utility {
 	@FindBy(className = "ng-trigger")
 	private WebElement passwordUpdateText;
 	
+	@FindBy(css = "div[aria-label='Logout Successfully']")
+	private WebElement logoutText;
+	
 	public ProductsPage loginApplication(String email,String pass) {
 		userEmail.sendKeys(email);
 		password.sendKeys(pass);
@@ -123,6 +126,11 @@ public class LoginPage extends Utility {
 	public String getPasswordUpdateText() {
 		waitForWebElementToAppear(passwordUpdateText);
 		return passwordUpdateText.getText();
+	}
+	
+	public String getLogoutText() {
+		waitForWebElementToAppear(logoutText);
+		return logoutText.getText();
 	}
 }
 

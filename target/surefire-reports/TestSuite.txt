@@ -1,4 +1,37 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 73.54 s -- in TestSuite
+Tests run: 45, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 403.3 s <<< FAILURE! -- in TestSuite
+TestNGTestRunner.runScenario["Add products to cart", "Products page functionality"](30) -- Time elapsed: 15.84 s <<< FAILURE!
+java.lang.AssertionError: expected [Product Added To Cart] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at StepDefinitions.ProductsPage.FunctionalityStepDefImpl.user_clciks_on_add_cart_button_on_a_product(FunctionalityStepDefImpl.java:223)
+	at ✽.User clciks on add cart button on a product(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/ProductsPage/Functionality.feature:36)
+
+TestNGTestRunner.runScenario["User provides password length less than 8 and passowrd error is displayed", "Register page error handling"](40) -- Time elapsed: 7.337 s <<< FAILURE!
+java.lang.AssertionError: expected [Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Please enter 1 Special Character, 1 Capital 1, Numeric 1 Small password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+
+TestNGTestRunner.runScenario["User provides password length less than 8 and passowrd error is displayed", "Register page error handling"](41) -- Time elapsed: 7.904 s <<< FAILURE!
+java.lang.AssertionError: expected [Password must be 8 Character Long!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at StepDefinitions.RegisterPage.ErrorHandlingStepDefImpl.password_length_error_message_is_displayed(ErrorHandlingStepDefImpl.java:140)
+	at ✽.Password must be 8 Character Long! password length error message is displayed(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/ErrorHandling.feature:65)
+

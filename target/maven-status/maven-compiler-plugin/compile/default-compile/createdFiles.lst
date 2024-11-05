@@ -1,5 +1,5 @@
-PageObjects\RegisterPage.class
 Utility\Utility.class
 PageObjects\LoginPage.class
 PageObjects\ProductsPage.class
 PageObjects\ForgotPasswordPage.class
+PageObjects\RegisterPage.class
