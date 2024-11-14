@@ -15,5 +15,5 @@ Feature: Register page functionality
 
     Examples: 
       | fName    | lName | email           | mobile     | occupation | gender | password        | confirmPassword | ageCheck |
-      | santhosh | sai   | vdrwes2343edghdfgrf@gmail.com | 1234567890 | Student    | Male   | 151Fa04124@4517 | 151Fa04124@4517 |	true		 |
+      | santhosh | sai   | vdrwecveuigbdfgrf@gmail.com | 1234567890 | Student    | Male   | 151Fa04124@4517 | 151Fa04124@4517 |	true		 |
       

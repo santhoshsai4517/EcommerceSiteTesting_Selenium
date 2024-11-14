@@ -93,12 +93,16 @@ public class ProductsPage extends Utility {
 	@FindBy(css = "div[aria-label='No Products Found']")
 	private WebElement noProductsToast;
 
+	@FindBy(className = "left")
+	private WebElement logo;
+
 	By productsBy = By.cssSelector(".mb-3");
 	By addToCart = By.cssSelector(".card-body button:last-of-type");
 	By toastContainer = By.id("toast-container");
 
 	public List<WebElement> getProductList() {
 		waitForWebElementToAppear(productsCount);
+//		System.out.println(products.size());
 		return products;
 	}
 
@@ -122,6 +126,11 @@ public class ProductsPage extends Utility {
 
 	public String getTitleText() {
 		return title.getText();
+	}
+
+	public ProductsPage clickLogo(){
+		logo.click();
+        return new ProductsPage(driver);
 	}
 
 	public LoginPage signout() {
