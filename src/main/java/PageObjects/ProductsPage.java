@@ -96,6 +96,8 @@ public class ProductsPage extends Utility {
 	@FindBy(className = "left")
 	private WebElement logo;
 
+
+	By viewProduct = By.cssSelector(".w-40");
 	By productsBy = By.cssSelector(".mb-3");
 	By addToCart = By.cssSelector(".card-body button:last-of-type");
 	By toastContainer = By.id("toast-container");
@@ -217,5 +219,10 @@ public class ProductsPage extends Utility {
 		waitForWebElementToAppear(noProductsToast);
 		return noProductsToast.getText();
 	}
+
+	public ProductPage viewProductDetails(String productName) {
+        getProductByName(productName).findElement(viewProduct).click();
+		return new ProductPage(driver);
+    }
 
 }
