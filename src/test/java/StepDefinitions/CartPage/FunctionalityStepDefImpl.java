@@ -1,7 +1,10 @@
 package StepDefinitions.CartPage;
 
 import BaseTest.BaseTest;
-import PageObjects.*;
+import PageObjects.CartPage;
+import PageObjects.LoginPage;
+import PageObjects.OrdersPage;
+import PageObjects.ProductsPage;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,27 +20,27 @@ import java.util.List;
 
 public class FunctionalityStepDefImpl extends BaseTest {
 
+    List<String> products = new ArrayList<String>();
     private LoginPage login;
     private ProductsPage prod;
     private CartPage cart;
     private OrdersPage orders;
     private int totalPrice = 0;
-    private HashMap<String,Integer> prices = new HashMap<String,Integer>();
-    List<String> products = new ArrayList<String>();
-
+    private HashMap<String, Integer> prices = new HashMap<String, Integer>();
 
     @Given("User landed on ECommerece page cart page")
     public void user_landed_on_e_commerece_page_cart_page() throws IOException, InterruptedException {
-        prices.put("zara",31500);
-        prices.put("adidas",31500);
-        prices.put("iphone",231500);
-        prices.put("qwerty",11500);
+        prices.put("zara", 31500);
+        prices.put("adidas", 31500);
+        prices.put("iphone", 231500);
+        prices.put("qwerty", 11500);
 
         login = launchApplication();
-        prod = login.loginApplication("santhoshsai4517@gmail.com","151Fa04124@4517");
+        prod = login.loginApplication("santhoshsai4517@gmail.com", "151Fa04124@4517");
         Thread.sleep(2000);
         cart = prod.gotoCart();
     }
+
     @When("User clicks on home button")
     public void user_clicks_on_home_button() {
         prod = prod.gotoProductsPage();
@@ -46,7 +49,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
     @Then("{string} message is displayed and Products page is displayed")
     public void messageIsDisplayedAndProductsPageIsDisplayed(String message) {
-        Assert.assertEquals(prod.getTitleText(),message);
+        Assert.assertEquals(prod.getTitleText(), message);
         Assert.assertEquals(driver.getCurrentUrl(), "https://rahulshettyacademy.com/client/dashboard/dash");
     }
 
@@ -95,7 +98,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
     }
 
     @Then("{string} toast is displayed and {string} message is displayed")
-    public void toastIsDisplayedAndMessageIsDisplayed(String toastMsg, String textMsg){
+    public void toastIsDisplayedAndMessageIsDisplayed(String toastMsg, String textMsg) {
 
         Assert.assertEquals(cart.getNoProductsText(), textMsg);
         Assert.assertEquals(cart.getNoProductsToastText(), toastMsg);
@@ -111,17 +114,17 @@ public class FunctionalityStepDefImpl extends BaseTest {
             prod.addProductToCart(product.toUpperCase());
         }
         cart = prod.gotoCart();
-        Assert.assertEquals(cart.getCartCount(),products.size());
+        Assert.assertEquals(cart.getCartCount(), products.size());
         login = prod.signout();
 
-        prod = login.loginApplication("santhoshsai4517@gmail.com","151Fa04124@4517");
+        prod = login.loginApplication("santhoshsai4517@gmail.com", "151Fa04124@4517");
         Thread.sleep(2000);
         cart = prod.gotoCart();
 
     }
 
     @When("User adds products to cart")
-    public void userAddsProductsToCart() {
+    public void userAddsProductsToCart() throws InterruptedException {
 
         prod = prod.gotoProductsPage();
 
@@ -132,28 +135,28 @@ public class FunctionalityStepDefImpl extends BaseTest {
             totalPrice += prices.get(product.split(" ")[0].toLowerCase());
         }
         cart = prod.gotoCart();
-        Assert.assertEquals(cart.getCartCount(),products.size());
+        Assert.assertEquals(cart.getCartCount(), products.size());
 
     }
 
     @Then("Validate product details and total price")
     public void validateProductDetailsAndTotalPrice() {
 
-       List<WebElement> cartItems = cart.getCartProducts();
+        List<WebElement> cartItems = cart.getCartProducts();
 
-       for(WebElement cartItem : cartItems) {
-           int i = products.indexOf(cartItem.findElement(By.cssSelector(".cartSection h3")).getText());
-           Assert.assertEquals(cartItem.findElement(By.cssSelector(".cartSection h3")).getText(),products.get(i));
-           Assert.assertEquals(cartItem.findElement(By.cssSelector(".cartSection p:nth-child(4)")).getText(), "MRP $ " + prices.get(products.get(i).split(" ")[0].toLowerCase()));
-           Assert.assertEquals(cartItem.findElement(By.cssSelector(".cartSection p:nth-child(1)")).getText(), "$ " + prices.get(products.get(i).split(" ")[0].toLowerCase()));
-           Assert.assertEquals(cart.getSubTotal(),"$"+ totalPrice);
-           Assert.assertEquals(cart.getTotal(),"$"+ totalPrice);
-       }
+        for (WebElement cartItem : cartItems) {
+            int i = products.indexOf(cartItem.findElement(By.cssSelector(".cartSection h3")).getText());
+            Assert.assertEquals(cartItem.findElement(By.cssSelector(".cartSection h3")).getText(), products.get(i));
+            Assert.assertEquals(cartItem.findElement(By.cssSelector(".cartSection p:nth-child(4)")).getText(), "MRP $ " + prices.get(products.get(i).split(" ")[0].toLowerCase()));
+            Assert.assertEquals(cartItem.findElement(By.cssSelector(".cartSection p:nth-child(1)")).getText(), "$ " + prices.get(products.get(i).split(" ")[0].toLowerCase()));
+            Assert.assertEquals(cart.getSubTotal(), "$" + totalPrice);
+            Assert.assertEquals(cart.getTotal(), "$" + totalPrice);
+        }
 
     }
 
     @When("User adds products to cart and clicks on checkout")
-    public void userAddsProductsToCartAndClicksOnCheckout() {
+    public void userAddsProductsToCartAndClicksOnCheckout() throws InterruptedException {
 
         prod = prod.gotoProductsPage();
 
@@ -185,8 +188,8 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         List<WebElement> cartItems = cart.getCartProducts();
 
-        for(WebElement cartItem : cartItems){
-            if(cartItem.findElement(By.cssSelector(".cartSection h3")).getText().equals("QWERTY")){
+        for (WebElement cartItem : cartItems) {
+            if (cartItem.findElement(By.cssSelector(".cartSection h3")).getText().equals("QWERTY")) {
                 cartItem.findElement(By.cssSelector(".btn-danger")).click();
                 break;
             }
@@ -198,23 +201,23 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
     @Then("product is removed from cart")
     public void productIsRemovedFromCart() {
-        Assert.assertEquals(cart.getCartCount(),products.size()-1);
+        Assert.assertEquals(cart.getCartCount(), products.size() - 1);
 
         List<WebElement> cartItems = cart.getCartProducts();
 
-        for(WebElement cartItem : cartItems){
+        for (WebElement cartItem : cartItems) {
             Assert.assertNotEquals(cartItem.findElement(By.cssSelector(".cartSection h3")).getText(), "QWERTY");
             totalPrice += prices.get(cartItem.findElement(By.cssSelector(".cartSection h3")).getText().split(" ")[0].toLowerCase());
         }
 
-        Assert.assertEquals(cart.getSubTotal(),"$"+ totalPrice);
-        Assert.assertEquals(cart.getTotal(),"$"+ totalPrice);
+        Assert.assertEquals(cart.getSubTotal(), "$" + totalPrice);
+        Assert.assertEquals(cart.getTotal(), "$" + totalPrice);
 
     }
 
 
     @When("User adds products to cart and clicks on buy now")
-    public void userAddsProductsToCartAndClicksOnBuyNow() {
+    public void userAddsProductsToCartAndClicksOnBuyNow() throws InterruptedException {
 
         prod = prod.gotoProductsPage();
 
@@ -227,11 +230,12 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         List<WebElement> cartItems = cart.getCartProducts();
         int i = 0;
-        for(WebElement cartItem : cartItems){
+        for (WebElement cartItem : cartItems) {
             cartItems = cart.getCartProducts();
             cartItems.get(i).findElement(By.cssSelector(".btn-primary")).click();
             Assert.assertTrue(driver.getCurrentUrl().contains("https://rahulshettyacademy.com/client/dashboard/order?prop="));
             prod.gotoCart();
+            i++;
         }
 
     }
@@ -241,4 +245,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
         if (driver != null)
             driver.close();
     }
+
+
 }
