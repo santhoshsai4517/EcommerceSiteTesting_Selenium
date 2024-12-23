@@ -1,6 +1,11 @@
 package BaseTest;
 
 import PageObjects.LoginPage;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,10 +18,24 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 
+import static org.hamcrest.Matchers.lessThan;
+
 public class BaseTest {
 
     public ChromeDriver driver;
     public LoginPage login;
+
+    public RequestSpecification requestSpecification = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com/api/ecom")
+            .setContentType(ContentType.JSON).build();
+
+    public ResponseSpecification getResponseSpecification(int statusCode, long responseTime, ContentType contentType) {
+        return new ResponseSpecBuilder()
+                .expectStatusCode(statusCode)
+                .expectContentType(contentType)
+                .expectResponseTime(lessThan(responseTime)) // Validate response time is less than 1000 ms
+                .expectHeader("Server", "Apache/2.4.52 (Ubuntu)") // Validate the Server header
+                .build();
+    }
 
     public ChromeDriver initializeDriver() throws FileNotFoundException, IOException {
 
@@ -25,7 +44,7 @@ public class BaseTest {
         options.setExperimentalOption("prefs", new java.util.HashMap<String, Object>() {{
             put("download.default_directory", downloadFilePath);
             put("download.prompt_for_download", false); // Disable the download prompt
-            
+
         }});
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
