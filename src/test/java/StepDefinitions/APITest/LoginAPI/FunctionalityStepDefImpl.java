@@ -7,8 +7,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
+
+import java.io.File;
 
 import static io.restassured.RestAssured.given;
 
@@ -32,7 +35,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
     public void userSendsLoginRequest() {
         loginResponse = request.when()
                 .post("/auth/login")
-                .then()
+                .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/LoginAPISuccessSchema.json")))
                 .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
                 .extract()
                 .as(LoginAPIResponse.class);
@@ -43,6 +46,5 @@ public class FunctionalityStepDefImpl extends BaseTest {
         Assert.assertEquals(message, loginResponse.getMessage());
         Assert.assertNotNull(loginResponse.getToken());
     }
-
-
+    
 }

@@ -7,9 +7,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
+
+import java.io.File;
 
 import static io.restassured.RestAssured.given;
 
@@ -38,7 +41,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
     @Then("{string} message is returned")
     public void messageIsReturned(String message) {
-        loginResponse = response.then()
+        loginResponse = response.then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/LoginAPIIncorrectCredSchema.json")))
                 .spec(getResponseSpecification(400, 2000, ContentType.JSON)).log().all()
                 .extract()
                 .as(LoginAPIResponse.class);
@@ -62,7 +65,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
     @Then("{string} error is returned and {string} message is returned in body")
     public void errorIsReturnedAndMessageIsReturnedInBody(String errorCode, String message) {
-        loginResponse = response.then()
+        loginResponse = response.then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/LoginAPIEmptyFieldSchema.json")))
                 .spec(getResponseSpecification(Integer.parseInt(errorCode), 1000, ContentType.JSON)).log().all().extract().as(LoginAPIResponse.class);
         Assert.assertEquals(loginResponse.getMessage(), message);
     }

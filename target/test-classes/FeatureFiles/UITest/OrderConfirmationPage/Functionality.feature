@@ -35,3 +35,13 @@ Feature: Order confirmation Page functionality
     Given User landed on ECommerece page order confirmation page
     When User clicks on orders link in order confirmation page
     Then user is redirected to Orders page is displayed
+
+  @Functional
+  Scenario: Product details, order id, url
+    Given User landed on ECommerece page order confirmation page
+    Then Validate product details,order id,url
+
+  @FunctionalFileDownload
+  Scenario: Download buttons
+    Given User landed on ECommerece page order confirmation page
+    When User clicks on download buttons in order confirmation page

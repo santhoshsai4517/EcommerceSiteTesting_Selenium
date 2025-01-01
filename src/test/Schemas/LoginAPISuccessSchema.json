@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string",
+      "default": "Login Successfully"
+    }
+  },
+  "required": [
+    "token",
+    "userId",
+    "message"
+  ],
+  "additionalProperties": false
+}
