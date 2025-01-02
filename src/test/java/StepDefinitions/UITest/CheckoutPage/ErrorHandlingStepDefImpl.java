@@ -28,12 +28,10 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Given("User landed on ECommerce page checkout page")
     public void userLandedOnECommercePageCheckoutPage() throws InterruptedException, IOException {
 
-        prices.put("zara", 31500);
         prices.put("adidas", 31500);
         prices.put("iphone", 231500);
         prices.put("qwerty", 11500);
 
-        products.add("ZARA COAT 3");
         products.add("qwerty");
         products.add("ADIDAS ORIGINAL");
         products.add("IPHONE 13 PRO");

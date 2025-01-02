@@ -37,17 +37,15 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Given("User landed on ECommerece page orders page when api is down")
     public void userLandedOnECommerecePageOrdersPageWhenApiIsDown() throws IOException, InterruptedException {
 
-        prices.put("zara", 31500);
         prices.put("adidas", 31500);
         prices.put("iphone", 231500);
         prices.put("qwerty", 11500);
 
-        products.add("ZARA COAT 3");
         products.add("qwerty");
         products.add("ADIDAS ORIGINAL");
         products.add("IPHONE 13 PRO");
 
-        productIds.put("zara", "6581ca399fd99c85e8ee7f45");
+        
         productIds.put("adidas", "6581ca979fd99c85e8ee7faf");
         productIds.put("iphone", "6581cade9fd99c85e8ee7ff5");
         productIds.put("qwerty", "6701364cae2afd4c0b90113c");

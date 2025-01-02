@@ -8,4 +8,8 @@ C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\PageObjects\ProductPage.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\PageObjects\ProductsPage.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\PageObjects\RegisterPage.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Request\ForgotPasswordAPIRequest.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Request\LoginAPIRequest.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\ForgotPasswordAPIResponse.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\LoginAPIResponse.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\Util\Utility.java

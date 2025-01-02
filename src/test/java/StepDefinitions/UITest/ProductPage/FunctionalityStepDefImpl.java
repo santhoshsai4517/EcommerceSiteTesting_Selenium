@@ -26,12 +26,10 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @Given("User lands on ECommerece page and product page")
     public void userLandsOnECommerecePageAndProductPage() throws IOException, InterruptedException {
 
-        prices.put("zara", 31500);
         prices.put("adidas", 31500);
         prices.put("iphone", 231500);
         prices.put("qwerty", 11500);
-
-        products.add("ZARA COAT 3");
+        
         products.add("QWERTY");
         products.add("ADIDAS ORIGINAL");
         products.add("IPHONE 13 PRO");

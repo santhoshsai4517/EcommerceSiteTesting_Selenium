@@ -40,6 +40,8 @@ public class BaseTest {
     public ChromeDriver initializeDriver() throws FileNotFoundException, IOException {
 
         String downloadFilePath = "C:\\Users\\santh\\Desktop\\Ecommerce Automation\\Selenium\\EcommercePractise\\Downloads";
+        // Retrieve the 'headless' option from the CLI or environment
+        boolean isHeadless = Boolean.parseBoolean(System.getProperty("headless"));
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", new java.util.HashMap<String, Object>() {{
             put("download.default_directory", downloadFilePath);
@@ -47,6 +49,10 @@ public class BaseTest {
 
         }});
         options.addArguments("--remote-allow-origins=*");
+        // Add the headless argument if the 'headless' option is true
+        if (isHeadless) {
+            options.addArguments("--headless");
+        }
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

@@ -1,27 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="100" passed="95" failed="5" skipped="0">
+<testng-results ignored="0" total="110" passed="109" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-16T11:18:46 IST" name="Surefire suite" finished-at="2024-12-16T11:50:16 IST" duration-ms="1889652">
+  <suite started-at="2025-01-02T12:28:10 IST" name="Surefire suite" finished-at="2025-01-02T12:58:16 IST" duration-ms="1805682">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-12-16T11:18:46 IST" name="Surefire test" finished-at="2024-12-16T11:50:16 IST" duration-ms="1889652">
+    <test started-at="2025-01-02T12:28:10 IST" name="Surefire test" finished-at="2025-01-02T12:58:16 IST" duration-ms="1805682">
       <class name="TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:18:46 IST" name="setUpClass" finished-at="2024-12-16T11:18:47 IST" duration-ms="214" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:10 IST" name="setUpClass" finished-at="2025-01-02T12:28:11 IST" duration-ms="1059" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@70560769]]>
+                <![CDATA[org.testng.TestRunner@293fb036]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:18:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:18:55 IST" duration-ms="8754" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:16 IST" duration-ms="4952" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Forgot Password API with incorrect details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Forgot Password API error handling"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:18 IST" duration-ms="2178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Forgot Password API with incorrect details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Forgot Password API error handling"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:22 IST" duration-ms="3201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Forgot Password API with wrong end point"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Forgot Password API error handling"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:24 IST" duration-ms="2313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Forgot Password API with correct details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Forgot Password API functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:26 IST" duration-ms="2300" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login API with incorrect login credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login API error handling"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:28 IST" duration-ms="2186" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login API with incorrect end point"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login API error handling"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:31 IST" duration-ms="2190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login API with no email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login API error handling"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:33 IST" duration-ms="2186" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login API with no password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login API error handling"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:35 IST" duration-ms="2247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login API with correct login credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login API functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:46 IST" duration-ms="10609" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +181,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:18:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:19:03 IST" duration-ms="7313" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:28:56 IST" duration-ms="10326" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +197,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:19:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:19:10 IST" duration-ms="7388" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:28:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:29:06 IST" duration-ms="10018" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +213,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:19:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:19:17 IST" duration-ms="7219" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:29:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:29:15 IST" duration-ms="9004" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +229,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:19:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:19:27 IST" duration-ms="9391" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:29:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:29:24 IST" duration-ms="8750" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,7 +245,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:19:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:19:34 IST" duration-ms="7396" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:29:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:29:33 IST" duration-ms="9176" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,7 +261,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:19:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:19:41 IST" duration-ms="7192" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:29:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:29:43 IST" duration-ms="9923" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -133,7 +277,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:19:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:20:10 IST" duration-ms="28485" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:29:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:30:13 IST" duration-ms="30029" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -149,7 +293,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:20:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:20:34 IST" duration-ms="24683" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:30:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:30:40 IST" duration-ms="27419" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -165,7 +309,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:20:59 IST" duration-ms="24647" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:30:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:31:11 IST" duration-ms="30556" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -181,7 +325,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:20:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:21:25 IST" duration-ms="26172" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:31:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:31:39 IST" duration-ms="27721" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -197,7 +341,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:21:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:21:52 IST" duration-ms="26524" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:31:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:32:05 IST" duration-ms="26824" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -213,7 +357,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:21:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:22:06 IST" duration-ms="14226" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:32:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:32:22 IST" duration-ms="17027" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,7 +373,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:22:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:22:20 IST" duration-ms="14209" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:32:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:32:41 IST" duration-ms="18907" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -245,7 +389,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:22:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:22:34 IST" duration-ms="13882" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:32:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:32:58 IST" duration-ms="17130" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -261,7 +405,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:22:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:22:50 IST" duration-ms="15489" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:32:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:33:15 IST" duration-ms="16314" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,7 +421,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:22:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:23:03 IST" duration-ms="13396" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:33:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:33:32 IST" duration-ms="17343" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -293,7 +437,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:23:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:23:16 IST" duration-ms="13542" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:33:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:33:49 IST" duration-ms="16658" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -309,7 +453,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:23:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:23:30 IST" duration-ms="13267" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:33:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:34:06 IST" duration-ms="17339" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -325,7 +469,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:23:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:24:25 IST" duration-ms="55172" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:34:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:34:55 IST" duration-ms="48474" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -341,7 +485,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:24:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:25:19 IST" duration-ms="54081" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:34:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:35:41 IST" duration-ms="46010" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -357,7 +501,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:25:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:26:15 IST" duration-ms="55727" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:35:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:36:28 IST" duration-ms="47299" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -373,7 +517,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:26:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:26:23 IST" duration-ms="8637" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:36:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:36:36 IST" duration-ms="8032" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -389,7 +533,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:26:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:26:30 IST" duration-ms="6239" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:36:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:36:43 IST" duration-ms="6877" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -405,7 +549,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:26:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:26:38 IST" duration-ms="8510" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:36:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:36:51 IST" duration-ms="7810" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -421,7 +565,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:26:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:26:47 IST" duration-ms="9356" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:36:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:36:58 IST" duration-ms="7486" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -437,7 +581,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:26:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:26:55 IST" duration-ms="7281" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:36:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:37:05 IST" duration-ms="7084" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -453,7 +597,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:26:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:27:02 IST" duration-ms="7771" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:37:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:37:12 IST" duration-ms="6706" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -469,7 +613,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:27:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:27:09 IST" duration-ms="6711" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:37:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:37:18 IST" duration-ms="6282" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -485,7 +629,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:27:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:27:16 IST" duration-ms="6658" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:37:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:37:25 IST" duration-ms="6364" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -501,7 +645,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:27:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:27:27 IST" duration-ms="11308" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:37:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:37:36 IST" duration-ms="11280" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -517,7 +661,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:27:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:27:35 IST" duration-ms="7434" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:37:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:37:42 IST" duration-ms="6244" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -533,7 +677,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:27:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:27:41 IST" duration-ms="6591" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:37:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:37:49 IST" duration-ms="6912" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -549,7 +693,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:27:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:27:55 IST" duration-ms="13574" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:37:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:01 IST" duration-ms="11527" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -565,7 +709,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:27:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:02 IST" duration-ms="6991" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:07 IST" duration-ms="6415" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -581,7 +725,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:08 IST" duration-ms="5878" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:15 IST" duration-ms="7670" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -597,7 +741,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:14 IST" duration-ms="5955" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:22 IST" duration-ms="7161" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -613,7 +757,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:20 IST" duration-ms="6450" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:28 IST" duration-ms="6374" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -629,7 +773,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:26 IST" duration-ms="5673" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:34 IST" duration-ms="5899" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -645,7 +789,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:33 IST" duration-ms="7308" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:41 IST" duration-ms="6476" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -661,7 +805,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:40 IST" duration-ms="7141" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:47 IST" duration-ms="6403" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -677,7 +821,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:47 IST" duration-ms="6548" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:38:53 IST" duration-ms="6262" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -693,7 +837,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:28:54 IST" duration-ms="7430" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:38:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:39:01 IST" duration-ms="7531" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -709,7 +853,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:28:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:29:42 IST" duration-ms="47356" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:39:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:39:31 IST" duration-ms="30452" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -725,7 +869,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:29:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:30:30 IST" duration-ms="48721" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:39:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:40:03 IST" duration-ms="31625" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -741,7 +885,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:30:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:31:17 IST" duration-ms="47002" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:40:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:40:42 IST" duration-ms="39580" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -757,7 +901,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:31:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:32:05 IST" duration-ms="47920" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:40:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:41:21 IST" duration-ms="38463" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -773,7 +917,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:32:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:32:52 IST" duration-ms="47205" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:41:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:41:46 IST" duration-ms="25371" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -789,7 +933,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:32:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:33:39 IST" duration-ms="46902" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:41:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:42:25 IST" duration-ms="39044" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -805,7 +949,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:33:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:34:25 IST" duration-ms="46167" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:42:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:43:02 IST" duration-ms="37121" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -818,25 +962,26 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at StepDefinitions.OrderConfirmationPage.FunctionalityStepDefImpl.validateProductDetailsOrderIdUrl(FunctionalityStepDefImpl.java:160)
-at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/OrderConfirmationPage/Functionality.feature:42)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:34:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:34:35 IST" duration-ms="9474" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:43:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:43:43 IST" duration-ms="40191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Download buttons"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order confirmation Page functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:43:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:43:51 IST" duration-ms="8741" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -852,7 +997,7 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:34:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:34:43 IST" duration-ms="8580" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:43:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:43:58 IST" duration-ms="6875" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -868,7 +1013,7 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:34:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:34:52 IST" duration-ms="8571" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:43:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:44:05 IST" duration-ms="7217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -884,7 +1029,7 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:34:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:35:00 IST" duration-ms="8158" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:44:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:44:12 IST" duration-ms="6906" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -900,7 +1045,7 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:35:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:35:08 IST" duration-ms="7453" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:44:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:44:20 IST" duration-ms="7585" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -916,7 +1061,7 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:35:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:35:55 IST" duration-ms="46852" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:44:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:44:58 IST" duration-ms="38298" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -932,7 +1077,7 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:35:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:36:42 IST" duration-ms="47450" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:44:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:45:35 IST" duration-ms="37176" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -948,7 +1093,7 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:36:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:37:26 IST" duration-ms="43622" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:45:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:46:14 IST" duration-ms="38153" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -961,49 +1106,27 @@ at ✽.Validate product details,order id,url(file:///C:/Users/santh/Desktop/Ecom
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (1286, 1095)
-  (Session info: chrome=130.0.6723.70)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b181763634d60658182ef6df93880e86, clickElement {id=f.E212ABF3576554B63DBE2CE9268EB14C.d.4BA7EF215D74BA01D781EC6C74ADD1C3.e.211}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60574/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on windows (b181763634d60658182ef6df93880e86)] -> css selector: tr.ng-star-inserted]] -> css selector: .btn-primary]
-Session ID: b181763634d60658182ef6df93880e86]]>
+              <![CDATA[expected [https://rahulshettyacademy.com/client/dashboard/order-details/67763d3de2b5443b1f0e1aa1] but found [https://rahulshettyacademy.com/client/dashboard/order-details/67763cf2e2b5443b1f0e19f8]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1286, 1095)
-  (Session info: chrome=130.0.6723.70)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b181763634d60658182ef6df93880e86, clickElement {id=f.E212ABF3576554B63DBE2CE9268EB14C.d.4BA7EF215D74BA01D781EC6C74ADD1C3.e.211}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60574/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on windows (b181763634d60658182ef6df93880e86)] -> css selector: tr.ng-star-inserted]] -> css selector: .btn-primary]
-Session ID: b181763634d60658182ef6df93880e86
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at StepDefinitions.OrdersPage.ErrorHandlingStepDefImpl.userClicksOnViewButtonWhenApiIsDown(ErrorHandlingStepDefImpl.java:150)
-at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/OrdersPage/ErrorHandling.feature:17)
+              <![CDATA[java.lang.AssertionError: expected [https://rahulshettyacademy.com/client/dashboard/order-details/67763d3de2b5443b1f0e1aa1] but found [https://rahulshettyacademy.com/client/dashboard/order-details/67763cf2e2b5443b1f0e19f8]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at StepDefinitions.UITest.OrdersPage.ErrorHandlingStepDefImpl.isDisplayedAndErrorOccurs(ErrorHandlingStepDefImpl.java:158)
+at ✽."You are not authorize to view this order" is displayed and "Unknown error occured" Error occurs(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/UITest/OrdersPage/ErrorHandling.feature:18)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:37:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:38:13 IST" duration-ms="47097" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:46:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:46:50 IST" duration-ms="36349" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1019,7 +1142,7 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:38:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:39:03 IST" duration-ms="50330" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:46:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:47:28 IST" duration-ms="37810" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1035,7 +1158,7 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:39:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:39:43 IST" duration-ms="39956" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:47:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:48:05 IST" duration-ms="36861" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1051,7 +1174,7 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:39:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:40:23 IST" duration-ms="40198" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:48:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:48:36 IST" duration-ms="31291" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1067,7 +1190,7 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:40:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:41:03 IST" duration-ms="40246" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:48:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:49:14 IST" duration-ms="38087" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1083,7 +1206,7 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:41:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:41:50 IST" duration-ms="46906" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:49:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:49:54 IST" duration-ms="39670" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1099,7 +1222,7 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:41:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:42:38 IST" duration-ms="47783" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:49:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:50:26 IST" duration-ms="32544" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1115,7 +1238,7 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:42:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:42:51 IST" duration-ms="13253" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:50:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:50:36 IST" duration-ms="10269" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1128,55 +1251,10 @@ at ✽.User clicks on view button when api is down(file:///C:/Users/santh/Deskto
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"button[routerlink*='myorders']"}
-  (Session info: chrome=130.0.6723.70)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a4aa70ea92cad751f225b67853f35dff, findElement {using=css selector, value=button[routerlink*='myorders']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61084/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a4aa70ea92cad751f225b67853f35dff]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"button[routerlink*='myorders']"}
-  (Session info: chrome=130.0.6723.70)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a4aa70ea92cad751f225b67853f35dff, findElement {using=css selector, value=button[routerlink*='myorders']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61084/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a4aa70ea92cad751f225b67853f35dff
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
-at PageObjects.ProductsPage.gotoMyOrders(ProductsPage.java:118)
-at StepDefinitions.OrdersPage.FunctionalityStepDefImpl.userLandedOnECommerecePageOrdersPageWithNoOrders(FunctionalityStepDefImpl.java:170)
-at ✽.User landed on ECommerece page orders page with no orders(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/OrdersPage/Functionality.feature:47)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:42:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:43:32 IST" duration-ms="40353" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:50:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:51:13 IST" duration-ms="37037" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1192,7 +1270,7 @@ at ✽.User landed on ECommerece page orders page with no orders(file:///C:/User
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:43:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:44:26 IST" duration-ms="54273" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:51:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:51:59 IST" duration-ms="45058" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1208,7 +1286,7 @@ at ✽.User landed on ECommerece page orders page with no orders(file:///C:/User
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:44:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:44:49 IST" duration-ms="23068" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:51:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:52:44 IST" duration-ms="45601" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1221,50 +1299,10 @@ at ✽.User landed on ECommerece page orders page with no orders(file:///C:/User
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button _ngcontent-paw-c34="" class="btn w-10 rounded" style="float: right;">...</button> is not clickable at point (1062, 443). Other element would receive the click: <div _ngcontent-paw-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
-  (Session info: chrome=130.0.6723.70)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [556c1577452d2fae78622038b2ea7f58, clickElement {id=f.4EB67D20353F1F63B0C92F62620DF2D1.d.A8BB64927AEE7F273B7FEA780E395869.e.79}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61241}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61241/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on windows (556c1577452d2fae78622038b2ea7f58)] -> class name: card]] -> css selector: .card-body button:last-of-type]
-Session ID: 556c1577452d2fae78622038b2ea7f58]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-paw-c34="" class="btn w-10 rounded" style="float: right;">...</button> is not clickable at point (1062, 443). Other element would receive the click: <div _ngcontent-paw-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
-  (Session info: chrome=130.0.6723.70)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [556c1577452d2fae78622038b2ea7f58, clickElement {id=f.4EB67D20353F1F63B0C92F62620DF2D1.d.A8BB64927AEE7F273B7FEA780E395869.e.79}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61241}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61241/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on windows (556c1577452d2fae78622038b2ea7f58)] -> class name: card]] -> css selector: .card-body button:last-of-type]
-Session ID: 556c1577452d2fae78622038b2ea7f58
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at PageObjects.ProductsPage.addProductToCart(ProductsPage.java:91)
-at StepDefinitions.OrdersPage.FunctionalityStepDefImpl.userLandedOnECommerecePageOrdersPage(FunctionalityStepDefImpl.java:69)
-at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/OrdersPage/Functionality.feature:62)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:44:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:44:58 IST" duration-ms="8666" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:52:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:52:54 IST" duration-ms="9405" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1280,7 +1318,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:44:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:45:05 IST" duration-ms="7700" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:52:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:53:02 IST" duration-ms="8506" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1296,7 +1334,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:45:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:45:13 IST" duration-ms="7475" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:53:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:53:11 IST" duration-ms="8560" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1312,7 +1350,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:45:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:45:24 IST" duration-ms="10633" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:53:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:53:20 IST" duration-ms="9487" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1328,7 +1366,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:45:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:45:33 IST" duration-ms="9017" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:53:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:53:28 IST" duration-ms="8317" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1344,7 +1382,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:45:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:45:51 IST" duration-ms="17945" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:53:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:53:45 IST" duration-ms="16633" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1360,7 +1398,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:45:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:46:13 IST" duration-ms="22872" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:53:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:54:06 IST" duration-ms="20995" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1376,7 +1414,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:46:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:46:26 IST" duration-ms="13027" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:54:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:54:20 IST" duration-ms="14247" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1392,7 +1430,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:46:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:46:41 IST" duration-ms="14402" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:54:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:54:35 IST" duration-ms="14649" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1408,7 +1446,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:46:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:46:57 IST" duration-ms="16368" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:54:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:54:48 IST" duration-ms="12994" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1424,7 +1462,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:46:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:47:10 IST" duration-ms="12416" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:54:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:55:02 IST" duration-ms="13622" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1440,7 +1478,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:47:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:47:17 IST" duration-ms="6903" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:55:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:55:10 IST" duration-ms="8061" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1456,7 +1494,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:47:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:47:24 IST" duration-ms="7358" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:55:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:55:18 IST" duration-ms="8054" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1472,7 +1510,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:47:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:47:31 IST" duration-ms="7222" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:55:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:55:24 IST" duration-ms="6758" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1488,7 +1526,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:47:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:47:38 IST" duration-ms="7344" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:55:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:55:33 IST" duration-ms="8238" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1504,7 +1542,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:47:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:48:03 IST" duration-ms="24202" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:55:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:55:57 IST" duration-ms="24183" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1520,7 +1558,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:48:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:48:12 IST" duration-ms="9785" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:55:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:56:06 IST" duration-ms="9451" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1536,7 +1574,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:48:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:48:21 IST" duration-ms="8532" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:56:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:56:16 IST" duration-ms="9474" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1552,7 +1590,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:48:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:48:31 IST" duration-ms="9668" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:56:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:56:25 IST" duration-ms="9354" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1568,7 +1606,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:48:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:48:37 IST" duration-ms="6232" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:56:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:56:32 IST" duration-ms="6659" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1584,7 +1622,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:48:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:48:44 IST" duration-ms="7603" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:56:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:56:40 IST" duration-ms="8282" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1600,7 +1638,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:48:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:48:54 IST" duration-ms="9311" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:56:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:56:48 IST" duration-ms="8226" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1616,7 +1654,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:48:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:03 IST" duration-ms="8886" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:56:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:56:57 IST" duration-ms="8312" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1632,7 +1670,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:11 IST" duration-ms="8347" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:56:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:57:05 IST" duration-ms="7909" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1648,7 +1686,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:20 IST" duration-ms="8597" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:57:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:57:12 IST" duration-ms="7881" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1664,7 +1702,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:27 IST" duration-ms="7564" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:57:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:57:20 IST" duration-ms="7880" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1680,7 +1718,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:36 IST" duration-ms="8625" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:57:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:57:29 IST" duration-ms="9188" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1696,7 +1734,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:43 IST" duration-ms="7462" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:57:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:57:39 IST" duration-ms="9161" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1712,7 +1750,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:52 IST" duration-ms="9058" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:57:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:57:49 IST" duration-ms="9957" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1728,7 +1766,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:49:59 IST" duration-ms="6204" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:57:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:57:56 IST" duration-ms="7018" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1744,7 +1782,7 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:49:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-16T11:50:16 IST" duration-ms="17392" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:57:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T12:58:10 IST" duration-ms="14513" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1757,109 +1795,10 @@ at ✽.User landed on ECommerece page orders page(file:///C:/Users/santh/Desktop
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Account Created Successfully']' (tried for 5 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Account Created Successfully']' (tried for 5 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at Util.Utility.waitForWebElementToAppear(Utility.java:32)
-at PageObjects.RegisterPage.getSuccessMessage(RegisterPage.java:174)
-at StepDefinitions.RegisterPage.FunctionalityStepDefImpl.user_provied_correct_details(FunctionalityStepDefImpl.java:78)
-at ✽.User provied santhosh sai rogj3ffgrf@gmail.com 1234567890 Student Male 151Fa04124@4517 151Fa04124@4517 true and submits form with correct details(file:///C:/Users/santh/Desktop/Ecommerce%20Automation/Selenium/EcommercePractise/src/test/java/FeatureFiles/RegisterPage/Functionality.feature:12)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[normalize-space()='Account Created Successfully']"}
-  (Session info: chrome=130.0.6723.70)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af08d081902fae1544db6caa1a697fb1, findElement {using=xpath, value=//h1[normalize-space()='Account Created Successfully']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61938}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61938/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: af08d081902fae1544db6caa1a697fb1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at Util.Utility.waitForWebElementToAppear(Utility.java:32)
-at PageObjects.RegisterPage.getSuccessMessage(RegisterPage.java:174)
-at StepDefinitions.RegisterPage.FunctionalityStepDefImpl.user_provied_correct_details(FunctionalityStepDefImpl.java:78)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
-at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
-at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestNGTestRunner@481a996b]" started-at="2024-12-16T11:50:16 IST" name="tearDownClass" finished-at="2024-12-16T11:50:16 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestNGTestRunner@7e07db1f]" started-at="2025-01-02T12:58:10 IST" name="tearDownClass" finished-at="2025-01-02T12:58:16 IST" duration-ms="5729" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

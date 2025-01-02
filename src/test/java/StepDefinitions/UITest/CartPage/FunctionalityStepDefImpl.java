@@ -30,7 +30,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
     @Given("User landed on ECommerece page cart page")
     public void user_landed_on_e_commerece_page_cart_page() throws IOException, InterruptedException {
-        prices.put("zara", 31500);
         prices.put("adidas", 31500);
         prices.put("iphone", 231500);
         prices.put("qwerty", 11500);
@@ -108,7 +107,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
     public void userAddsProductsToCartAndClicksOnLogout() throws InterruptedException {
         prod = prod.gotoProductsPage();
         List<String> products = new ArrayList<String>();
-        products.add("ZARA COAT 3");
+        products.add("ADIDAS ORIGINAL");
         products.add("qwerty");
         for (String product : products) {
             prod.addProductToCart(product.toUpperCase());
@@ -128,7 +127,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         prod = prod.gotoProductsPage();
 
-        products.add("ZARA COAT 3");
+        products.add("ADIDAS ORIGINAL");
         products.add("QWERTY");
         for (String product : products) {
             prod.addProductToCart(product);
@@ -160,7 +159,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         prod = prod.gotoProductsPage();
 
-        products.add("ZARA COAT 3");
+        products.add("ADIDAS ORIGINAL");
         products.add("QWERTY");
         for (String product : products) {
             prod.addProductToCart(product);
@@ -178,7 +177,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
     public void userAddsProductsToCartAndClicksOnDelete() throws InterruptedException {
         prod = prod.gotoProductsPage();
 
-        products.add("ZARA COAT 3");
+        products.add("ADIDAS ORIGINAL");
         products.add("QWERTY");
         for (String product : products) {
             prod.addProductToCart(product);
@@ -221,7 +220,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         prod = prod.gotoProductsPage();
 
-        products.add("ZARA COAT 3");
+        products.add("ADIDAS ORIGINAL");
         products.add("QWERTY");
         for (String product : products) {
             prod.addProductToCart(product);

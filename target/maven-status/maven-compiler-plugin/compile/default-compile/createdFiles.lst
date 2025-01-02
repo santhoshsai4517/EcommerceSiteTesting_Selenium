@@ -1,4 +1,15 @@
+PageObjects\OrdersPage.class
 PageObjects\ProductsPage.class
+Util\Utility.class
 PageObjects\RegisterPage.class
+POJO\Request\LoginAPIRequest.class
+PageObjects\CartPage.class
+POJO\Response\ForgotPasswordAPIResponse.class
+PageObjects\ProductPage.class
 PageObjects\LoginPage.class
+PageObjects\OrderConfirmationPage.class
 PageObjects\ForgotPasswordPage.class
+POJO\Response\LoginAPIResponse.class
+PageObjects\CheckoutPage.class
+PageObjects\OrderPage.class
+POJO\Request\ForgotPasswordAPIRequest.class

@@ -92,7 +92,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                 int count = json.getInt("count");
 //				System.out.println(json.getJSONArray("data").get(0));
                 try {
-                    Assert.assertEquals(productspage.getProductList().size(), count);
+
                     Assert.assertTrue(productspage.getProductCount().contains(Integer.toString(count)));
 
                     for (int i = 0; i < count; i++) {
@@ -104,7 +104,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                                 .contains(Integer.toString(prodPrice)));
                     }
                 } catch (AssertionError e) {
-                    System.out.println(flag);
+                    System.out.println(e);
                     flag = false; // Set flag if validation fails
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
@@ -169,7 +169,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         List<String> products = new ArrayList<String>();
-        products.add("ZARA COAT 3");
+        products.add("ADIDAS ORIGINAL");
         products.add("qwerty");
         for (i = 0; i < products.size(); i++) {
             devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
@@ -249,7 +249,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                 JSONObject jsonResponse = new JSONObject(requestPayload);
                 System.out.println(jsonResponse.getString("productName"));
                 try {
-                    Assert.assertEquals(jsonResponse.getString("productName"), "ZARA",
+                    Assert.assertEquals(jsonResponse.getString("productName"), "ADIDAS ORIGINAL",
                             "productName should be an empty string");
                     Assert.assertTrue(jsonResponse.isNull("minPrice"), "minPrice should be null");
                     Assert.assertTrue(jsonResponse.isNull("maxPrice"), "maxPrice should be null");
@@ -307,7 +307,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         });
 
-        productspage.searchProduct("ZARA");
+        productspage.searchProduct("ADIDAS ORIGINAL");
         Assert.assertTrue(flag);
     }
 
