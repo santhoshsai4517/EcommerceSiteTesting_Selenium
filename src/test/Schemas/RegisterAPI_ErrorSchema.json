@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "string",
+      "default": "First Name is required!"
+    },
+    "success": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "success",
+    "error"
+  ],
+  "additionalProperties": false
+}

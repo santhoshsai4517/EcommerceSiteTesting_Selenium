@@ -48,5 +48,5 @@ public class FunctionalityStepDefImpl extends BaseTest {
         Assert.assertEquals(message, forgotPasswordAPIResponse.getMessage());
     }
 
-    
+
 }

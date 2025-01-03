@@ -64,4 +64,5 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
                 .spec(getResponseSpecification(Integer.parseInt(code), 1000, ContentType.HTML)).log().all();
     }
 
+
 }

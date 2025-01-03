@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array"
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ],
+  "additionalProperties": false
+}

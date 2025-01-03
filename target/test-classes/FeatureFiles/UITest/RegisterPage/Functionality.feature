@@ -13,6 +13,6 @@ Feature: Register page functionality
     Then "Account Created Successfully" accoun created message is displayed
 
     Examples:
-      | fName    | lName | email                     | mobile     | occupation | gender | password        | confirmPassword | ageCheck |
-      | santhosh | sai   | proejgiinoffgrf@gmail.com | 1234567890 | Student    | Male   | 151Fa04124@4517 | 151Fa04124@4517 | true     |
+      | fName    | lName | email                         | mobile     | occupation | gender | password        | confirmPassword | ageCheck |
+      | santhosh | sai   | wfwefwhkniubvoaw324@gmail.com | 1234567890 | Student    | Male   | 151Fa04124@4517 | 151Fa04124@4517 | true     |
       
