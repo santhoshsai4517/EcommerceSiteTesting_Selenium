@@ -1,6 +1,6 @@
 package POJO.Response;
 
-public class GetAllProductsAPIResponseWithNoToken {
+public class NoAccessTokenResponse {
 
     private String type;
     private String message;

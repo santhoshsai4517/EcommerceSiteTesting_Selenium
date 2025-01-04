@@ -4,8 +4,8 @@ import BaseTest.BaseTest;
 import POJO.Request.GetAllProductsAPIRequest;
 import POJO.Request.LoginAPIRequest;
 import POJO.Response.GetAllProductsAPIResponse;
-import POJO.Response.GetAllProductsAPIResponseWithNoToken;
 import POJO.Response.LoginAPIResponse;
+import POJO.Response.NoAccessTokenResponse;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,7 +24,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
     RequestSpecification request;
     GetAllProductsAPIResponse getAllProductsAPIResponse;
-    GetAllProductsAPIResponseWithNoToken getAllProductsAPIResponseWithNoToken;
+    NoAccessTokenResponse noAccessTokenResponse;
 
     LoginAPIResponse loginResponse;
     Response response;
@@ -82,15 +82,16 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
     @When("User sends request with api end point")
     public void userSendsRequestWithApiEndPoint() {
-        getAllProductsAPIResponseWithNoToken = request.when()
+        noAccessTokenResponse = request.when()
                 .post("/product/get-all-products")
-                .then().spec(getResponseSpecification(401, 2000, ContentType.JSON)).log().all()
+                .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/NoAccessTokenSchema.json")))
+                .spec(getResponseSpecification(401, 2000, ContentType.JSON)).log().all()
                 .extract()
-                .as(GetAllProductsAPIResponseWithNoToken.class);
+                .as(NoAccessTokenResponse.class);
     }
 
     @Then("{string} message is returned in response")
     public void messageIsReturnedInResponse(String message) {
-        Assert.assertEquals(message, getAllProductsAPIResponseWithNoToken.getMessage());
+        Assert.assertEquals(message, noAccessTokenResponse.getMessage());
     }
 }
