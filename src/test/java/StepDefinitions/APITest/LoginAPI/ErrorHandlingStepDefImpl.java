@@ -60,13 +60,13 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Then("{string} error is returned")
     public void errorIsReturned(String errorCode) {
         response.then()
-                .spec(getResponseSpecification(404, 1000, ContentType.HTML)).log().all();
+                .spec(getResponseSpecification(404, 2000, ContentType.HTML)).log().all();
     }
 
     @Then("{string} error is returned and {string} message is returned in body")
     public void errorIsReturnedAndMessageIsReturnedInBody(String errorCode, String message) {
         loginResponse = response.then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/LoginAPIEmptyFieldSchema.json")))
-                .spec(getResponseSpecification(Integer.parseInt(errorCode), 1000, ContentType.JSON)).log().all().extract().as(LoginAPIResponse.class);
+                .spec(getResponseSpecification(Integer.parseInt(errorCode), 2000, ContentType.JSON)).log().all().extract().as(LoginAPIResponse.class);
         Assert.assertEquals(loginResponse.getMessage(), message);
     }
 

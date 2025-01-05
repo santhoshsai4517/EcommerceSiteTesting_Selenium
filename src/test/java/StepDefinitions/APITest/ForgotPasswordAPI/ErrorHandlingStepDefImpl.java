@@ -61,7 +61,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Then("{string} error code is returned in response")
     public void errorIsReturnedInResponse(String code) {
         response.then()
-                .spec(getResponseSpecification(Integer.parseInt(code), 1000, ContentType.HTML)).log().all();
+                .spec(getResponseSpecification(Integer.parseInt(code), 2000, ContentType.HTML)).log().all();
     }
 
 

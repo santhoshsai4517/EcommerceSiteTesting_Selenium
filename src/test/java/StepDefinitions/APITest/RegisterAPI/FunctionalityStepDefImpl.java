@@ -26,7 +26,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
         RegisterAPIRequest registerAPIRequest = new RegisterAPIRequest();
         registerAPIRequest.setFirstName("sai");
         registerAPIRequest.setLastName("santhosh");
-        registerAPIRequest.setUserEmail("dsgbdfeornnlkmn@gmail.com");
+        registerAPIRequest.setUserEmail("sthnyrhwfgsthth@gmail.com");
         registerAPIRequest.setUserPassword("151Fa04124@4517");
         registerAPIRequest.setConfirmPassword("151Fa04124@4517");
         registerAPIRequest.setGender("Male");
