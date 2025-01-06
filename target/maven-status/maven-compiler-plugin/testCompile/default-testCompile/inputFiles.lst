@@ -1,9 +1,14 @@
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\BaseTest\BaseTest.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\ForgotPasswordAPI\ErrorHandlingStepDefImpl.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\ForgotPasswordAPI\FunctionalityStepDefImpl.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\GetAllProductsAPI\ErrorHandlingStepDefImpl.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\GetAllProductsAPI\FunctionalityStepDefImpl.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\GetProductDetailsAPI\ErrorHandlingStepDefImpl.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\GetProductDetailsAPI\FunctionalityStepDefImpl.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\LoginAPI\ErrorHandlingStepDefImpl.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\LoginAPI\FunctionalityStepDefImpl.java
-C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\Hooks.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\RegisterAPI\ErrorHandlingStepDefImpl.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\APITest\RegisterAPI\FunctionalityStepDefImpl.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\UITest\CartPage\ErrorHandlingStepDefImpl.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\UITest\CartPage\FunctionalityStepDefImpl.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\test\java\StepDefinitions\UITest\CheckoutPage\ErrorHandlingStepDefImpl.java

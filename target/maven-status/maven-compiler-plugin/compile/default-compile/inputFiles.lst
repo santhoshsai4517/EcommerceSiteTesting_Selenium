@@ -9,7 +9,16 @@ C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\PageObjects\ProductsPage.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\PageObjects\RegisterPage.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Request\ForgotPasswordAPIRequest.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Request\GetAllProductsAPIRequest.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Request\LoginAPIRequest.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Request\RegisterAPIRequest.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\ForgotPasswordAPIResponse.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\GetAllProductsAPIResponse.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\GetProductDetailsAPI_NoProductResponse.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\GetProductDetailsResponse.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\LoginAPIResponse.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\NoAccessTokenResponse.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\Product.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\RegisterAPIErrorResponse.java
+C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\POJO\Response\RegisterAPIResponse.java
 C:\Users\santh\Desktop\Ecommerce Automation\Selenium\EcommercePractise\src\main\java\Util\Utility.java

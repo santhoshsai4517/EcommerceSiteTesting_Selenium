@@ -127,6 +127,13 @@
                         <includes>
                             <include>**/TestNGTestRunner.java</include>
                         </includes>
+                        <properties>
+                            <property>
+                                <name>dataproviderthreadcount</name>
+                                <value>20</value>
+                            </property>
+                        </properties>
+                        
                     </configuration>
                 </plugin>
 

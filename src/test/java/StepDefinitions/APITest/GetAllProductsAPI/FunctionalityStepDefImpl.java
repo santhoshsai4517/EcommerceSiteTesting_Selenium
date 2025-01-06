@@ -132,6 +132,5 @@ public class FunctionalityStepDefImpl extends BaseTest {
         Assert.assertEquals(message, getAllProductsAPIResponse.getMessage());
         Assert.assertEquals(getAllProductsAPIResponse.getData().size(), 0);
     }
-
-
+    
 }
