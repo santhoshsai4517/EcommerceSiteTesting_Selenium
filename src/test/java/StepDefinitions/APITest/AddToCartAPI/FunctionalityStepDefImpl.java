@@ -50,7 +50,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
         loginResponse = request.when()
                 .post("/auth/login")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/schemas/LoginAPISuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract().as(LoginAPIResponse.class);
 
     }
@@ -80,7 +80,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                 .header("Authorization", loginResponse.getToken()).log().all().when()
                 .post("/product/get-all-products")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/GetAllProductsAPI_SuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(GetAllProductsAPIResponse.class);
     }
@@ -104,7 +104,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                 .header("Authorization", loginResponse.getToken()).log().all().when()
                 .post("/user/add-to-cart")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/AddToCartAPI_SuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract().as(AddToCartAPI_SuccessResponse.class);
     }
 
@@ -113,5 +113,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
         //Validating the message
         Assert.assertEquals(message, addToCartAPIResponse.getMessage());
     }
+
 
 }

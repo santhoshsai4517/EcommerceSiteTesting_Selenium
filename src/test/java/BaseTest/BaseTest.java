@@ -24,6 +24,7 @@ public class BaseTest {
 
     public ChromeDriver driver;
     public LoginPage login;
+    public int responseTime = 4000;
 
     public RequestSpecification requestSpecification = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com/api/ecom")
             .setContentType(ContentType.JSON).build();

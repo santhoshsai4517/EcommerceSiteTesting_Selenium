@@ -38,7 +38,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
         forgotPasswordAPIResponse = request.when()
                 .post("/auth/new-password")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/ForgotPasswordAPI_SuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(ForgotPasswordAPIResponse.class);
     }

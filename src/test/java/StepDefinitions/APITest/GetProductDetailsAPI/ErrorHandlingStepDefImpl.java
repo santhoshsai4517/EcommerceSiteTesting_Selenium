@@ -43,7 +43,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         loginResponse = request.when()
                 .post("/auth/login")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/LoginAPISuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(LoginAPIResponse.class);
     }
@@ -67,7 +67,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
                 .header("Authorization", loginResponse.getToken()).log().all().when()
                 .post("/product/get-all-products")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/GetAllProductsAPI_SuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(GetAllProductsAPIResponse.class);
     }
@@ -83,7 +83,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
                 .header("Authorization", "").log().all().when()
                 .get("/product/get-product-detail/{productId}")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/NoAccessTokenSchema.json")))
-                .spec(getResponseSpecification(401, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(401, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(NoAccessTokenResponse.class);
     }
@@ -102,7 +102,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
     @Then("{string} code is returned in response to user")
     public void codeIsReturnedInResponseToUser(String errorCode) {
-        response.then().spec(getResponseSpecification(Integer.parseInt(errorCode), 2000, ContentType.HTML)).log().all();
+        response.then().spec(getResponseSpecification(Integer.parseInt(errorCode), responseTime, ContentType.HTML)).log().all();
     }
 
     @When("User sends product id that does not exists")
@@ -111,7 +111,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
                 .header("Authorization", loginResponse.getToken()).log().all().when()
                 .get("/product/get-product-detail/{productId}")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/GetProductDetails_NoProductSchema.json")))
-                .spec(getResponseSpecification(400, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(400, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(GetProductDetailsAPI_NoProductResponse.class);
     }

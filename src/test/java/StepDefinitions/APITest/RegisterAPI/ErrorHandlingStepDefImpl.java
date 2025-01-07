@@ -49,7 +49,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         registerAPIResponse = request.when()
                 .post("/auth/register")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/RegisterAPI_ErrorSchema.json")))
-                .spec(getResponseSpecification(422, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(422, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(RegisterAPIErrorResponse.class);
 
@@ -127,7 +127,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         registerResponse = request.when()
                 .post("/auth/register")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/RegisterAPI_SuccessSchema.json")))
-                .spec(getResponseSpecification(400, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(400, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(RegisterAPIResponse.class);
     }
@@ -185,7 +185,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Then("{string} error is returned in register api reesponse")
     public void errorIsReturnedInRegisterApiReesponse(String code) {
         response.then()
-                .spec(getResponseSpecification(Integer.parseInt(code), 2000, ContentType.HTML)).log().all();
+                .spec(getResponseSpecification(Integer.parseInt(code), responseTime, ContentType.HTML)).log().all();
 
     }
 }

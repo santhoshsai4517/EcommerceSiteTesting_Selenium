@@ -45,7 +45,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         loginAPIResponse = request.when()
                 .post("/auth/login")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/schemas/LoginAPISuccessSchema.json")))
-                .spec(getResponseSpecification(200, 4000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract().as(LoginAPIResponse.class);
     }
 
@@ -73,7 +73,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         //Validating error code in the response
         response
                 .then()
-                .spec(getResponseSpecification(Integer.parseInt(code), 4000, ContentType.HTML)).log().all();
+                .spec(getResponseSpecification(Integer.parseInt(code), responseTime, ContentType.HTML)).log().all();
     }
 
     @When("User send request to get cart count with wrong end point")
@@ -94,7 +94,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
                 .when()
                 .get("user/get-cart-count/{userId}")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/NoAccessTokenSchema.json")))
-                .spec(getResponseSpecification(401, 4000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(401, responseTime, ContentType.JSON)).log().all()
                 .extract().as(NoAccessTokenResponse.class);
 
     }
@@ -113,7 +113,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
                 .when()
                 .get("user/get-cart-count/{userId}")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/GetCartCountAPI_NoCartFoundSchema.json")))
-                .spec(getResponseSpecification(400, 4000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(400, responseTime, ContentType.JSON)).log().all()
                 .extract().as(GetCartCountAPI_NoCartProductsResponse.class);
     }
 

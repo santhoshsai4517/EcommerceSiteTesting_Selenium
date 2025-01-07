@@ -45,7 +45,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
         registerAPIResponse = request.when()
                 .post("/auth/register")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/RegisterAPI_SuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(RegisterAPIResponse.class);
 

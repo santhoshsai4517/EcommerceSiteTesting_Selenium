@@ -45,7 +45,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Then("^(.+) message  and (.+) error code is returned$")
     public void messageMessageAndCodeErrorCodeIsReturned(String message, String code) {
         forgotPasswordAPIResponse = response.then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/ForgotPasswordAPI_SuccessSchema.json")))
-                .spec(getResponseSpecification(Integer.parseInt(code), 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(Integer.parseInt(code), responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(ForgotPasswordAPIResponse.class);
 
@@ -61,7 +61,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Then("{string} error code is returned in response")
     public void errorIsReturnedInResponse(String code) {
         response.then()
-                .spec(getResponseSpecification(Integer.parseInt(code), 2000, ContentType.HTML)).log().all();
+                .spec(getResponseSpecification(Integer.parseInt(code), responseTime, ContentType.HTML)).log().all();
     }
 
 

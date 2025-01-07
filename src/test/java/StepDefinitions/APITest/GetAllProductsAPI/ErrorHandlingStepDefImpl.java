@@ -46,7 +46,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         loginResponse = given().spec(requestSpecification).body(loginRequest).log().all().when()
                 .post("/auth/login")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/LoginAPISuccessSchema.json")))
-                .spec(getResponseSpecification(200, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(200, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(LoginAPIResponse.class);
 
@@ -63,7 +63,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @Then("{string} error is returned in response")
     public void errorIsReturnedInResponse(String error) {
         response.then()
-                .spec(getResponseSpecification(Integer.parseInt(error), 2000, ContentType.HTML)).log().all();
+                .spec(getResponseSpecification(Integer.parseInt(error), responseTime, ContentType.HTML)).log().all();
     }
 
     @Given("User provides filter details without authorization token")
@@ -85,7 +85,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         noAccessTokenResponse = request.when()
                 .post("/product/get-all-products")
                 .then().body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/Schemas/NoAccessTokenSchema.json")))
-                .spec(getResponseSpecification(401, 2000, ContentType.JSON)).log().all()
+                .spec(getResponseSpecification(401, responseTime, ContentType.JSON)).log().all()
                 .extract()
                 .as(NoAccessTokenResponse.class);
     }
