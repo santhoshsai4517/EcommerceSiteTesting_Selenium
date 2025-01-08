@@ -3,6 +3,7 @@ package StepDefinitions.APITest.RegisterAPI;
 import BaseTest.BaseTest;
 import POJO.Request.RegisterAPIRequest;
 import POJO.Response.RegisterAPIResponse;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,10 +24,13 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @Given("User provides correct detials")
     public void userProvidesCorrectDetials() {
 
+        // Creating faker object to generate fake data
+        Faker faker = new Faker();
+
         RegisterAPIRequest registerAPIRequest = new RegisterAPIRequest();
-        registerAPIRequest.setFirstName("sai");
-        registerAPIRequest.setLastName("santhosh");
-        registerAPIRequest.setUserEmail("srbiuhnoghoh2348@gmail.com");
+        registerAPIRequest.setFirstName(faker.name().firstName());
+        registerAPIRequest.setLastName(faker.name().lastName());
+        registerAPIRequest.setUserEmail(faker.internet().emailAddress());
         registerAPIRequest.setUserPassword("151Fa04124@4517");
         registerAPIRequest.setConfirmPassword("151Fa04124@4517");
         registerAPIRequest.setGender("Male");
