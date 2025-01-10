@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "orderById": {
+          "type": "string"
+        },
+        "orderBy": {
+          "type": "string"
+        },
+        "productOrderedId": {
+          "type": "string"
+        },
+        "productName": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "productDescription": {
+          "type": "string"
+        },
+        "productImage": {
+          "type": "string"
+        },
+        "orderPrice": {
+          "type": "string"
+        },
+        "__v": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "_id",
+        "orderById",
+        "orderBy",
+        "productOrderedId",
+        "productName",
+        "country",
+        "productDescription",
+        "productImage",
+        "orderPrice",
+        "__v"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}
