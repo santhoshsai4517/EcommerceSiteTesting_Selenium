@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "orders": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "productOrderId": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "orders",
+    "productOrderId",
+    "message"
+  ]
+}

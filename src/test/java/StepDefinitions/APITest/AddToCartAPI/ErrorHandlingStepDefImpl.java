@@ -27,6 +27,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     GetAllProductsAPIResponse getAllProductsAPIResponse;
     AddToCartAPI_SuccessResponse addToCartAPIResponse;
     NoAccessTokenResponse noAccessTokenResponse;
+
     Response response;
     List<Product> products;
 
@@ -130,6 +131,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         AddToCartAPIRequest requestBody = new AddToCartAPIRequest();
         requestBody.setProduct(products.get(0));
 
+        // Sending request with no access token
         noAccessTokenResponse = given().spec(requestSpecification).body(requestBody)
                 .log().all()
                 .when()
@@ -156,4 +158,5 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
                 .when()
                 .post("/user/add-to-cart");
     }
+
 }
