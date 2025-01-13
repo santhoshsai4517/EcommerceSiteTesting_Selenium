@@ -39,9 +39,9 @@ public class BaseTest {
                 .build();
     }
 
-    public ChromeDriver initializeDriver() throws FileNotFoundException, IOException {
+    public ChromeDriver initializeDriver() {
 
-        String downloadFilePath = "C:\\Users\\santh\\Desktop\\Ecommerce Automation\\Selenium\\EcommercePractise\\Downloads";
+        String downloadFilePath = "Downloads";
         // Retrieve the 'headless' option from the CLI or environment
         boolean isHeadless = Boolean.parseBoolean(System.getProperty("headless"));
         ChromeOptions options = new ChromeOptions();
