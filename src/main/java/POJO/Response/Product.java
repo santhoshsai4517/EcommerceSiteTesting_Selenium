@@ -118,4 +118,23 @@ public class Product {
     public void set__v(String __v) {
         this.__v = __v;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "_id='" + _id + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productCategory='" + productCategory + '\'' +
+                ", productSubCategory='" + productSubCategory + '\'' +
+                ", productPrice=" + productPrice +
+                ", productDescription='" + productDescription + '\'' +
+                ", productImage='" + productImage + '\'' +
+                ", productRating='" + productRating + '\'' +
+                ", productTotalOrders='" + productTotalOrders + '\'' +
+                ", productStatus=" + productStatus +
+                ", productFor='" + productFor + '\'' +
+                ", productAddedBy='" + productAddedBy + '\'' +
+                ", __v='" + __v + '\'' +
+                '}';
+    }
 }
