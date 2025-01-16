@@ -1,6 +1,7 @@
 package BaseTest;
 
 import PageObjects.LoginPage;
+import Utility.ExcelUtils;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -26,6 +27,7 @@ public class BaseTest {
     public LoginPage login;
     public int responseTime = 4000;
     public String country = "India";
+    public ExcelUtils excelUtils = new ExcelUtils("Data.xlsx", "Login Details");
 
     public RequestSpecification requestSpecification = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com/api/ecom")
             .setContentType(ContentType.JSON).build();
@@ -40,6 +42,7 @@ public class BaseTest {
     }
 
     public ChromeDriver initializeDriver() {
+
 
         String downloadFilePath = "Downloads";
         // Retrieve the 'headless' option from the CLI or environment
@@ -74,6 +77,10 @@ public class BaseTest {
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "//reports//" + testcaseName + ".png"));
         return System.getProperty("user.dir") + "//reports//" + testcaseName + ".png";
+    }
+
+    public void close() {
+        excelUtils.close();
     }
 
 

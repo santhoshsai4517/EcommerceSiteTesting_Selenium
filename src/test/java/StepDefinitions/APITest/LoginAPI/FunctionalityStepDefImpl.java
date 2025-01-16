@@ -12,6 +12,8 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 
 import java.io.File;
+import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
@@ -23,9 +25,14 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @Given("User provides correct login credentials")
     public void userProvidesCorrectLoginCredentials() {
 
+        List<Map<String, String>> data = excelUtils.readRows(1, 1);
+
+//        System.out.println(data);
         LoginAPIRequest loginRequest = new LoginAPIRequest();
-        loginRequest.setUserEmail("santhoshsai4517@gmail.com");
-        loginRequest.setUserPassword("151Fa04124@4517");
+        loginRequest.setUserEmail(data.get(0).get("UserName"));
+        loginRequest.setUserPassword(data.get(0).get("Password"));
+
+        close();
 
         request = given().spec(requestSpecification).body(loginRequest).log().all();
 

@@ -21,18 +21,22 @@ public class FunctionalityStepDefImpl extends BaseTest {
     RequestSpecification request;
     RegisterAPIResponse registerAPIResponse;
 
+    // Creating faker object to generate fake data
+    Faker faker = new Faker();
+    String email = faker.internet().emailAddress();
+    String password = "151Fa04124@4517";
+
+
     @Given("User provides correct detials")
     public void userProvidesCorrectDetials() {
 
-        // Creating faker object to generate fake data
-        Faker faker = new Faker();
 
         RegisterAPIRequest registerAPIRequest = new RegisterAPIRequest();
         registerAPIRequest.setFirstName(faker.name().firstName());
         registerAPIRequest.setLastName(faker.name().lastName());
-        registerAPIRequest.setUserEmail(faker.internet().emailAddress());
-        registerAPIRequest.setUserPassword("151Fa04124@4517");
-        registerAPIRequest.setConfirmPassword("151Fa04124@4517");
+        registerAPIRequest.setUserEmail(email);
+        registerAPIRequest.setUserPassword(password);
+        registerAPIRequest.setConfirmPassword(password);
         registerAPIRequest.setGender("Male");
         registerAPIRequest.setUserMobile("9988776655");
         registerAPIRequest.setOccupation("Doctor");
@@ -58,6 +62,11 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @Then("{string} message is returned in register api response")
     public void messageIsReturnedInRegisterApiResponse(String message) {
         Assert.assertEquals(message, registerAPIResponse.getMessage());
+        int row = excelUtils.getRowCount();
+        excelUtils.writeCell(row, 0, email);
+        excelUtils.writeCell(row, 1, password);
+        excelUtils.save("Data.xlsx");
+        close();
     }
 
 }
