@@ -13,10 +13,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
@@ -81,10 +78,15 @@ public class E2EStepDefImpl extends BaseTest {
     public void messageIsReturnedInRegisterResponse(String message) {
         //Validating the message
         Assert.assertEquals(message, registerResponse.getMessage());
+        int row = excelUtils.getRowCount();
+        excelUtils.writeCell(row, 0, email);
+        excelUtils.writeCell(row, 1, password);
+        excelUtils.save("Data.xlsx");
     }
 
     @When("User sends forgot password request with all valid details")
     public void userSendsForgotPasswordRequestWithAllValidDetails() {
+
 
         //Creating forgot password api request body
         ForgotPasswordAPIRequest forgotPasswordAPIRequest = new ForgotPasswordAPIRequest();
@@ -106,14 +108,24 @@ public class E2EStepDefImpl extends BaseTest {
     public void messageIsReturnedToUserInForgotPasswordApiResponse(String message) {
         //Validating the message
         Assert.assertEquals(message, forgotPasswordAPIResponse.getMessage());
+        int row = excelUtils.getRowCount() - 1;
+        excelUtils.writeCell(row, 0, email);
+        excelUtils.writeCell(row, 1, updatedPassword);
+        excelUtils.save("Data.xlsx");
+        close();
     }
 
     @When("user sends login api request with valid details")
     public void userSendsLoginApiRequestWithValidDetails() {
+
+        //Reading data from excel sheet for login request
+        int row = excelUtils.getRowCount();
+        List<Map<String, String>> data = excelUtils.readRows(row - 1, row - 1);
+
         //Creating login api request body
         LoginAPIRequest loginAPIRequest = new LoginAPIRequest();
-        loginAPIRequest.setUserEmail(email);
-        loginAPIRequest.setUserPassword(updatedPassword);
+        loginAPIRequest.setUserEmail(data.get(0).get("UserName"));
+        loginAPIRequest.setUserPassword(data.get(0).get("Password"));
 
         //Sending login request and validating response schema
         loginResponse = given().spec(requestSpecification).body(loginAPIRequest).log().all()

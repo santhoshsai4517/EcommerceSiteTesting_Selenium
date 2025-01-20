@@ -169,8 +169,8 @@ public class FunctionalityStepDefImpl extends BaseTest {
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         List<String> products = new ArrayList<String>();
-        products.add("ADIDAS ORIGINAL");
-        products.add("qwerty");
+        products.add("Banarsi Saree");
+        products.add("IPHONE 13 PRO");
         for (i = 0; i < products.size(); i++) {
             devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
             devTools.addListener(Network.requestWillBeSent(), request ->

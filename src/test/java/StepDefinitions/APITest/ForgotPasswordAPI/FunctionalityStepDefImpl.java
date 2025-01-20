@@ -13,6 +13,8 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 
 import java.io.File;
+import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
@@ -20,14 +22,21 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
     RequestSpecification request;
     ForgotPasswordAPIResponse forgotPasswordAPIResponse;
+    String updatePassword = "123";
+    String email = "";
 
     @Given("User provides correct details")
     public void userProvidesCorrectDetails() {
 
+        int row = excelUtils.getRowCount();
+        List<Map<String, String>> data = excelUtils.readRows(row - 1, row - 1);
+
+        email = data.get(0).get("UserName");
+
         ForgotPasswordAPIRequest forgotPasswordAPIRequest = new ForgotPasswordAPIRequest();
-        forgotPasswordAPIRequest.setUserEmail("s1234@gmail.com");
-        forgotPasswordAPIRequest.setUserPassword("151Fa04124@4517");
-        forgotPasswordAPIRequest.setConfirmPassword("151Fa04124@4517");
+        forgotPasswordAPIRequest.setUserEmail(email);
+        forgotPasswordAPIRequest.setUserPassword(updatePassword);
+        forgotPasswordAPIRequest.setConfirmPassword(updatePassword);
 
         request = given().spec(requestSpecification).body(forgotPasswordAPIRequest).log().all();
 
@@ -46,6 +55,11 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @Then("{string} message is returned to user")
     public void messageIsReturnedToUser(String message) {
         Assert.assertEquals(message, forgotPasswordAPIResponse.getMessage());
+        int row = excelUtils.getRowCount() - 1;
+        excelUtils.writeCell(row, 0, email);
+        excelUtils.writeCell(row, 1, updatePassword);
+        excelUtils.save("Data.xlsx");
+        close();
     }
 
 

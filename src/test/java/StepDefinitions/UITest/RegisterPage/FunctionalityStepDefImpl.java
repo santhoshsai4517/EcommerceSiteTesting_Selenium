@@ -4,6 +4,7 @@ import BaseTest.BaseTest;
 import PageObjects.LoginPage;
 import PageObjects.ProductsPage;
 import PageObjects.RegisterPage;
+import com.github.javafaker.Faker;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -46,7 +47,9 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @When("^User provied (.+) (.+) (.+) (.+) (.+) (.+) (.+) (.+) (.+) and submits form with correct details$")
     public void user_provied_correct_details(String fName, String lName, String email, String mobile, String occupation,
                                              String gender, String password, String confirmPassword, boolean check) {
-        this.email = email;
+
+        Faker faker = new Faker();
+        this.email = faker.internet().emailAddress();
         this.password = password;
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
@@ -63,18 +66,18 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
                 Assert.assertEquals(jsonObject.getString("firstName"), fName);
                 Assert.assertEquals(jsonObject.getString("lastName"), lName);
-                Assert.assertEquals(jsonObject.getString("userEmail"), email);
+                Assert.assertEquals(jsonObject.getString("userEmail"), this.email);
                 Assert.assertEquals(jsonObject.getString("userMobile"), mobile);
                 Assert.assertEquals(jsonObject.getString("userRole"), "customer");
                 Assert.assertEquals(jsonObject.getString("occupation"), occupation);
                 Assert.assertEquals(jsonObject.getString("gender"), gender);
-                Assert.assertEquals(jsonObject.getString("userPassword"), password);
+                Assert.assertEquals(jsonObject.getString("userPassword"), this.password);
                 Assert.assertEquals(jsonObject.getString("confirmPassword"), confirmPassword);
                 Assert.assertEquals(jsonObject.getBoolean("required"), check);
             }
 
         });
-        register.registerUser(fName, lName, email, mobile, occupation, gender, password, confirmPassword, check);
+        register.registerUser(fName, lName, this.email, mobile, occupation, gender, this.password, confirmPassword, check);
         msg = register.getSuccessMessage();
     }
 
