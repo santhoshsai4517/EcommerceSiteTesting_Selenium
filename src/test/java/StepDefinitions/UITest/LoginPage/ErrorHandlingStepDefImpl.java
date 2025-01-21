@@ -6,10 +6,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v127.fetch.Fetch;
-import org.openqa.selenium.devtools.v127.fetch.model.RequestId;
-import org.openqa.selenium.devtools.v127.fetch.model.RequestPattern;
-import org.openqa.selenium.devtools.v127.network.model.ErrorReason;
+import org.openqa.selenium.devtools.v130.fetch.Fetch;
+import org.openqa.selenium.devtools.v130.fetch.model.RequestId;
+import org.openqa.selenium.devtools.v130.fetch.model.RequestPattern;
+import org.openqa.selenium.devtools.v130.network.model.ErrorReason;
 import org.testng.Assert;
 
 import java.io.FileNotFoundException;

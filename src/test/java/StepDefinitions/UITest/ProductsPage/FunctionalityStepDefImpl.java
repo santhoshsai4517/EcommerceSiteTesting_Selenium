@@ -14,10 +14,10 @@ import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v126.network.Network;
-import org.openqa.selenium.devtools.v126.network.model.Request;
-import org.openqa.selenium.devtools.v126.network.model.RequestId;
-import org.openqa.selenium.devtools.v126.network.model.Response;
+import org.openqa.selenium.devtools.v130.network.Network;
+import org.openqa.selenium.devtools.v130.network.model.Request;
+import org.openqa.selenium.devtools.v130.network.model.RequestId;
+import org.openqa.selenium.devtools.v130.network.model.Response;
 import org.testng.Assert;
 
 import java.io.FileNotFoundException;

@@ -25,6 +25,9 @@ public class OrderConfirmationPage extends Utility {
     @FindBy(css = "div[class='ng-star-inserted'] tr")
     private List<WebElement> orderDetails;
 
+    @FindBy(css = "div[aria-label='Order Placed Successfully']")
+    private WebElement successToast;
+
     public OrderConfirmationPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
@@ -46,5 +49,9 @@ public class OrderConfirmationPage extends Utility {
     public OrdersPage clickOrdersLink() {
         ordersLink.click();
         return new OrdersPage(driver);
+    }
+
+    public String getSuccessMessage() {
+        return successToast.getText();
     }
 }

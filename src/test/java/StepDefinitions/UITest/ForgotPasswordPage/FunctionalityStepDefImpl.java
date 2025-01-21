@@ -11,9 +11,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.json.JSONObject;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v126.network.Network;
-import org.openqa.selenium.devtools.v126.network.model.Request;
-import org.openqa.selenium.devtools.v126.network.model.RequestId;
+import org.openqa.selenium.devtools.v130.network.Network;
+import org.openqa.selenium.devtools.v130.network.model.Request;
+import org.openqa.selenium.devtools.v130.network.model.RequestId;
 import org.testng.Assert;
 
 import java.io.FileNotFoundException;
@@ -69,7 +69,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                 System.out.println(requestPayload);
                 JSONObject jsonObject = new JSONObject(requestPayload);
                 Assert.assertEquals(jsonObject.getString("userEmail"), email);
-                Assert.assertEquals(jsonObject.getString("userPaassword"), password);
+                Assert.assertEquals(jsonObject.getString("userPassword"), password);
                 Assert.assertEquals(jsonObject.getString("confirmPassword"), confirmPassword);
             }
 

@@ -8,9 +8,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v127.fetch.Fetch;
-import org.openqa.selenium.devtools.v127.fetch.model.RequestPattern;
-import org.openqa.selenium.devtools.v127.network.model.ErrorReason;
+import org.openqa.selenium.devtools.v130.fetch.Fetch;
+import org.openqa.selenium.devtools.v130.fetch.model.RequestPattern;
+import org.openqa.selenium.devtools.v130.network.model.ErrorReason;
 import org.testng.Assert;
 
 import java.io.IOException;
@@ -45,7 +45,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         products.add("ADIDAS ORIGINAL");
         products.add("IPHONE 13 PRO");
 
-        
+
         productIds.put("adidas", "6581ca979fd99c85e8ee7faf");
         productIds.put("iphone", "6581cade9fd99c85e8ee7ff5");
         productIds.put("qwerty", "6701364cae2afd4c0b90113c");

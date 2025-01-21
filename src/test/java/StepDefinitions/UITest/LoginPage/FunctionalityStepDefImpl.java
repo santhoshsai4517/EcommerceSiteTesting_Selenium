@@ -10,9 +10,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.json.JSONObject;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v126.network.Network;
-import org.openqa.selenium.devtools.v126.network.model.Request;
-import org.openqa.selenium.devtools.v126.network.model.RequestId;
+import org.openqa.selenium.devtools.v130.network.Network;
+import org.openqa.selenium.devtools.v130.network.model.Request;
+import org.openqa.selenium.devtools.v130.network.model.RequestId;
 import org.testng.Assert;
 
 import java.io.FileNotFoundException;

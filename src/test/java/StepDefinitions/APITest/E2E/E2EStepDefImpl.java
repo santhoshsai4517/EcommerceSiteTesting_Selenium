@@ -455,4 +455,5 @@ public class E2EStepDefImpl extends BaseTest {
         //Validating message in response
         Assert.assertEquals(deleteProductAPIResponse.getMessage(), message);
     }
+
 }

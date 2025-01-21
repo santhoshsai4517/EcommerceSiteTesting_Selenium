@@ -9,13 +9,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.json.JSONObject;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v126.network.Network;
-import org.openqa.selenium.devtools.v126.network.model.Request;
-import org.openqa.selenium.devtools.v126.network.model.RequestId;
-import org.openqa.selenium.devtools.v126.network.model.Response;
-import org.openqa.selenium.devtools.v127.fetch.Fetch;
-import org.openqa.selenium.devtools.v127.fetch.model.RequestPattern;
-import org.openqa.selenium.devtools.v127.network.model.ErrorReason;
+import org.openqa.selenium.devtools.v130.fetch.Fetch;
+import org.openqa.selenium.devtools.v130.fetch.model.RequestPattern;
+import org.openqa.selenium.devtools.v130.network.Network;
+import org.openqa.selenium.devtools.v130.network.model.ErrorReason;
+import org.openqa.selenium.devtools.v130.network.model.Request;
+import org.openqa.selenium.devtools.v130.network.model.RequestId;
+import org.openqa.selenium.devtools.v130.network.model.Response;
 import org.testng.Assert;
 
 import java.io.FileNotFoundException;
@@ -172,7 +172,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         devTools.send(Fetch.enable(patterns, Optional.empty()));
 
         devTools.addListener(Fetch.requestPaused(), requestPaused -> {
-            org.openqa.selenium.devtools.v127.fetch.model.RequestId requestId = requestPaused.getRequestId();
+            org.openqa.selenium.devtools.v130.fetch.model.RequestId requestId = requestPaused.getRequestId();
             System.out.println(requestId);
             String originalBody = requestPaused.getRequest().getPostData().orElse("");
             originalBody = originalBody.replace(email, "santhoshsai4517@gmail.com");
