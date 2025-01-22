@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v130.fetch.Fetch;
 import org.openqa.selenium.devtools.v130.fetch.model.RequestPattern;
@@ -14,50 +16,53 @@ import org.openqa.selenium.devtools.v130.network.model.ErrorReason;
 import org.testng.Assert;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
+import java.util.Random;
 
 public class ErrorHandlingStepDefImpl extends BaseTest {
 
-    List<String> products = new ArrayList<String>();
     private LoginPage login;
     private ProductsPage prod;
     private CartPage cart;
     private OrdersPage orders;
     private CheckoutPage checkout;
     private OrderPage viewOrder;
-    private HashMap<String, Integer> prices = new HashMap<String, Integer>();
-    private HashMap<String, String> productIds = new HashMap<String, String>();
     private OrderConfirmationPage confirmation;
     private int orderCount = 0;
     private String email = "santhoshsai4517@gmail.com";
     private String country = "India";
     private String orderId;
+    private List<WebElement> products;
+    private int noOfProductsToAddToCart = 2;
 
 
     @Given("User landed on ECommerece page orders page when api is down")
     public void userLandedOnECommerecePageOrdersPageWhenApiIsDown() throws IOException, InterruptedException {
 
-        prices.put("adidas", 31500);
-        prices.put("iphone", 231500);
-        prices.put("qwerty", 11500);
-
-        products.add("qwerty");
-        products.add("ADIDAS ORIGINAL");
-        products.add("IPHONE 13 PRO");
-
-
-        productIds.put("adidas", "6581ca979fd99c85e8ee7faf");
-        productIds.put("iphone", "6581cade9fd99c85e8ee7ff5");
-        productIds.put("qwerty", "6701364cae2afd4c0b90113c");
-
 
         login = launchApplication();
         prod = login.loginApplication(email, "151Fa04124@4517");
 
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
-        for (String product : products)
-            prod.addProductToCart(product.toUpperCase());
+        products = prod.getProductList();
+
+        //Adding random products to cart
+        for (int i = 0; i < noOfProductsToAddToCart; ) {
+
+            //Generating a random index to get product from products list
+            int index = new Random().nextInt(products.size());
+            String prodName = products.get(index).findElement(By.cssSelector(".card-body h5 b")).getText();
+            //Adding products cart
+            prod.addProductToCart(prodName);
+
+            i = Integer.parseInt(prod.getCartCount());
+
+            Thread.sleep(2000);
+        }
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+        Thread.sleep(4000);
 
         cart = prod.gotoCart();
         checkout = cart.checkout();
@@ -76,7 +81,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         Optional<List<RequestPattern>> patterns = Optional.of(
-                Arrays.asList(new RequestPattern(Optional.of("*get-orders-for-customer*"), Optional.empty(), Optional.empty())));
+                List.of(new RequestPattern(Optional.of("*get-orders-for-customer*"), Optional.empty(), Optional.empty())));
 
         devTools.send(Fetch.enable(patterns, Optional.empty()));
 
@@ -92,12 +97,6 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://rahulshettyacademy.com/client/dashboard/myorders");
     }
 
-    @After
-    public void afterScenario() {
-        if (driver != null)
-            driver.close();
-    }
-
 
     @When("User clicks on delete button when api is down")
     public void userClicksOnDeleteButtonWhenApiIsDown() {
@@ -106,7 +105,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         Optional<List<RequestPattern>> patterns = Optional.of(
-                Arrays.asList(new RequestPattern(Optional.of("*delete-order*"), Optional.empty(), Optional.empty())));
+                List.of(new RequestPattern(Optional.of("*delete-order*"), Optional.empty(), Optional.empty())));
 
         devTools.send(Fetch.enable(patterns, Optional.empty()));
 
@@ -133,7 +132,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         Optional<List<RequestPattern>> patterns = Optional.of(
-                Arrays.asList(new RequestPattern(Optional.of("*get-orders-details?id=*"), Optional.empty(), Optional.empty())));
+                List.of(new RequestPattern(Optional.of("*get-orders-details?id=*"), Optional.empty(), Optional.empty())));
 
         devTools.send(Fetch.enable(patterns, Optional.empty()));
 
@@ -152,9 +151,15 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
 
     @Then("{string} is displayed and {string} Error occurs")
-    public void isDisplayedAndErrorOccurs(String displayeMessage, String toastMessage) {
+    public void isDisplayedAndErrorOccurs(String displayMessage, String toastMessage) {
         Assert.assertEquals(viewOrder.getUnknownError(), toastMessage);
-        Assert.assertEquals(viewOrder.getErrorText(), displayeMessage);
+        Assert.assertEquals(viewOrder.getErrorText(), displayMessage);
         Assert.assertEquals(driver.getCurrentUrl(), "https://rahulshettyacademy.com/client/dashboard/order-details/" + orderId);
+    }
+
+    @After
+    public void afterScenario() {
+        if (driver != null)
+            driver.quit();
     }
 }

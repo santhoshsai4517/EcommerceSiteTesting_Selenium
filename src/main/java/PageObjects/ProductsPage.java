@@ -1,10 +1,7 @@
 package PageObjects;
 
 import Util.Utility;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -88,6 +85,7 @@ public class ProductsPage extends Utility {
 
     public String addProductToCart(String productName) throws InterruptedException {
 
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getProductByName(productName).findElement(addToCart));
         getProductByName(productName).findElement(addToCart).click();
         waitForElementToAppear(toastContainer);
         try {
@@ -120,6 +118,8 @@ public class ProductsPage extends Utility {
     }
 
     public CartPage gotoCart() {
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", CartButton);
+
         CartButton.click();
         return new CartPage(driver);
     }
@@ -195,6 +195,7 @@ public class ProductsPage extends Utility {
     }
 
     public ProductPage viewProductDetails(String productName) throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getProductByName(productName).findElement(viewProduct));
         getProductByName(productName).findElement(viewProduct).click();
         return new ProductPage(driver);
     }

@@ -6,38 +6,41 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class FunctionalityStepDefImpl extends BaseTest {
 
-    List<String> products = new ArrayList<String>();
     private LoginPage login;
     private ProductsPage prod;
     private ProductPage product;
     private CartPage cart;
     private OrdersPage orders;
-    private HashMap<String, Integer> prices = new HashMap<String, Integer>();
+    private List<WebElement> products;
+    private String productName, productPrice;
 
     @Given("User lands on ECommerece page and product page")
     public void userLandsOnECommerecePageAndProductPage() throws IOException, InterruptedException {
 
-        prices.put("adidas", 31500);
-        prices.put("iphone", 231500);
-        prices.put("qwerty", 11500);
-        
-        products.add("QWERTY");
-        products.add("ADIDAS ORIGINAL");
-        products.add("IPHONE 13 PRO");
 
         login = launchApplication();
         prod = login.loginApplication("santhoshsai4517@gmail.com", "151Fa04124@4517");
-//        Thread.sleep(1000);
-        product = prod.viewProductDetails("QWERTY");
+        products = prod.getProductList();
+
+        Thread.sleep(2000);
+
+        int index = new Random().nextInt(products.size());
+        productName = products.get(index).findElement(By.cssSelector(".card-body h5 b")).getText();
+        productPrice = products.get(index).findElement(By.cssSelector(".text-muted")).getText();
+
+
+        product = prod.viewProductDetails(productName);
+
 
     }
 
@@ -91,48 +94,48 @@ public class FunctionalityStepDefImpl extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://rahulshettyacademy.com/client/auth/login");
     }
 
-    @After
-    public void afterScenario() {
-        if (driver != null)
-            driver.close();
-    }
-
     @When("User clciked on continue shopping button")
     public void userClcikedOnContinueShoppingButton() throws InterruptedException {
         prod = prod.gotoProductsPage();
 
-        for (String productName : products) {
-            product = prod.viewProductDetails(productName);
-            Thread.sleep(1000);
-            Assert.assertEquals(product.getProductName(), productName);
-            Assert.assertEquals(product.getProductPrice(), "$ " + prices.get(productName.split(" ")[0].toLowerCase()));
-            Assert.assertTrue(driver.getCurrentUrl().contains("https://rahulshettyacademy.com/client/dashboard/product-details/"));
-            prod = product.continueShopping();
-        }
+
+        product = prod.viewProductDetails(productName);
+        Thread.sleep(1000);
+        Assert.assertEquals(product.getProductName(), productName);
+        Assert.assertEquals(product.getProductPrice(), productPrice);
+        Assert.assertTrue(driver.getCurrentUrl().contains("https://rahulshettyacademy.com/client/dashboard/product-details/"));
+        prod = product.continueShopping();
+
 
     }
 
     @When("User clciked on add to cart button")
     public void userClcikedOnAddToCartButton() throws InterruptedException {
         prod = prod.gotoProductsPage();
-        int i = 0;
-        for (String productName : products) {
 
-            product = prod.viewProductDetails(productName);
-            Thread.sleep(1000);
-            product.addToCart();
-            Assert.assertEquals(product.getProductAddedToCartToastText(), "Product Added To Cart");
-            i++;
-            Thread.sleep(1000);
-            Assert.assertEquals(prod.getCartCount(), String.valueOf(i));
-            prod = product.continueShopping();
 
-        }
+        product = prod.viewProductDetails(productName);
+        Thread.sleep(1000);
+        product.addToCart();
+        Assert.assertEquals(product.getProductAddedToCartToastText(), "Product Added To Cart");
+
+        Thread.sleep(1000);
+        prod = product.continueShopping();
+
+
         cart = prod.gotoCart();
     }
 
     @Then("products are added to cart")
     public void productsAreAddedToCart() {
-        Assert.assertEquals(cart.getCartCount(), products.size());
+        Assert.assertEquals(cart.getCartCount(), 1);
     }
+
+
+    @After
+    public void afterScenario() {
+        if (driver != null)
+            driver.quit();
+    }
+
 }

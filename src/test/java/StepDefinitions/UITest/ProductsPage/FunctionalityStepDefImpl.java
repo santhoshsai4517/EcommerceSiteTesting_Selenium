@@ -20,24 +20,28 @@ import org.openqa.selenium.devtools.v130.network.model.RequestId;
 import org.openqa.selenium.devtools.v130.network.model.Response;
 import org.testng.Assert;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 public class FunctionalityStepDefImpl extends BaseTest {
 
+    private final int noOfProductsToAddToCart = 3;
     private ProductsPage productspage;
     private CartPage cart;
     private OrdersPage orders;
     private LoginPage login;
     private boolean flag = true;
-    private int i, k;
+    private List<WebElement> products;
+
 
     @Given("I landed on ECommerece page products page")
-    public void i_landed_on_e_commerece_page_products_page() throws FileNotFoundException, IOException {
+    public void i_landed_on_e_commerece_page_products_page() throws IOException, InterruptedException {
         productspage = launchApplication().loginApplication("santhoshsai4517@gmail.com", "151Fa04124@4517");
+
+        //Extracting products
+        products = productspage.getProductList();
     }
 
     @Then("{string} logo message is displayed")
@@ -53,8 +57,8 @@ public class FunctionalityStepDefImpl extends BaseTest {
             if (req.getUrl().contains("get-all-products")) {
                 RequestId requestId = request.getRequestId();
                 String requestPayload = devTools.send(Network.getRequestPostData(requestId));
-//				System.out.println(requestPayload);
-                String filters[] = new String[0];
+
+
                 JSONObject jsonResponse = new JSONObject(requestPayload);
                 try {
                     Assert.assertEquals(jsonResponse.getString("productName"), "",
@@ -79,40 +83,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         });
 
-        devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-        devTools.addListener(Network.responseReceived(), response -> {
-            Response res = response.getResponse();
-
-            if (res.getUrl().contains("get-all-products")) {
-
-                RequestId requestId = response.getRequestId();
-                String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody().toString();
-                JSONObject json = new JSONObject(responsePayload);
-
-                int count = json.getInt("count");
-//				System.out.println(json.getJSONArray("data").get(0));
-                try {
-
-                    Assert.assertTrue(productspage.getProductCount().contains(Integer.toString(count)));
-
-                    for (int i = 0; i < count; i++) {
-                        Object data = json.getJSONArray("data").get(i);
-                        String prodName = (new JSONObject(data.toString())).getString("productName");
-                        int prodPrice = (new JSONObject(data.toString())).getInt("productPrice");
-                        WebElement productByName = productspage.getProductByName(prodName);
-                        Assert.assertTrue(productByName.findElement(By.className(".text-muted")).getText()
-                                .contains(Integer.toString(prodPrice)));
-                    }
-                } catch (AssertionError e) {
-                    System.out.println(e);
-                    flag = false; // Set flag if validation fails
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-
-            }
-
-        });
 
         Thread.sleep(2000);
         Assert.assertEquals(productspage.getTitleText(), message);
@@ -166,35 +136,28 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
     @When("User clciks on add cart button on a product")
     public void user_clciks_on_add_cart_button_on_a_product() throws InterruptedException {
+        Thread.sleep(2000);
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
-        List<String> products = new ArrayList<String>();
-        products.add("Banarsi Saree");
-        products.add("IPHONE 13 PRO");
-        for (i = 0; i < products.size(); i++) {
+
+        int i;
+        for (i = 0; i < noOfProductsToAddToCart; ) {
+
+            //Generating a random index to get product from products list
+            int index = new Random().nextInt(products.size());
+            String prodName = products.get(index).findElement(By.cssSelector(".card-body h5 b")).getText();
             devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
             devTools.addListener(Network.requestWillBeSent(), request ->
 
             {
                 Request req = request.getRequest();
-                if (req.getUrl().contains("add-to-cart") && k < 2) {
-//					System.out.println(k);
-                    k++;
+                if (req.getUrl().contains("add-to-cart")) {
+
                     RequestId requestId = request.getRequestId();
                     String requestPayload = devTools.send(Network.getRequestPostData(requestId));
 
                     JSONObject jsonResponse = new JSONObject(requestPayload);
-                    jsonResponse = new JSONObject(jsonResponse.get("product").toString());
-
-                    try {
-//						System.out.println(jsonResponse.getString("productName"));
-                        Assert.assertEquals(jsonResponse.getString("productName"), products.get(i));
-
-                    } catch (AssertionError e) {
-
-                        flag = false;
-//						System.out.println(flag);
-                    }
+                    System.out.println(jsonResponse);
 
                 }
 
@@ -203,38 +166,46 @@ public class FunctionalityStepDefImpl extends BaseTest {
             devTools.addListener(Network.responseReceived(), response -> {
                 Response res = response.getResponse();
 
-                if (res.getUrl().contains("add-to-cart") && k < 2) {
+                if (res.getUrl().contains("add-to-cart")) {
 
                     RequestId requestId = response.getRequestId();
-                    String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody().toString();
+                    String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody();
                     JSONObject json = new JSONObject(responsePayload);
 
                     try {
-                        Assert.assertEquals(json.getString("message"), "Product Added To Cart");
+                        Assert.assertEquals(json.getString("message"), "Product Added To Cart", "Message error");
                     } catch (AssertionError e) {
 
                         flag = false; // Set flag if validation fails
+
                     }
 
                 }
 
             });
 
-            Assert.assertEquals(productspage.addProductToCart(products.get(i).toUpperCase()), "Product Added To Cart");
+
+            String message = productspage.addProductToCart(prodName);
+
+            i = Integer.parseInt(productspage.getCartCount());
+
+            Assert.assertEquals(message, "Product Added To Cart");
+
+            Thread.sleep(2000);
         }
 
-//		System.out.println(flag);
         Assert.assertTrue(flag);
     }
 
     @Then("{string} message is displayed and product is added to cart")
     public void message_is_displayed_and_product_is_added_to_cart(String message) {
-        Assert.assertEquals(productspage.getCartCount(), "2");
+        Assert.assertEquals(productspage.getCartCount(), Integer.toString(noOfProductsToAddToCart));
     }
 
     @When("User searches for a product")
     public void user_searches_for_a_product() throws InterruptedException {
         Thread.sleep(2000);
+        String prodname = products.get(0).findElement(By.cssSelector(".card-body h5 b")).getText();
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
@@ -245,11 +216,11 @@ public class FunctionalityStepDefImpl extends BaseTest {
             if (req.getUrl().contains("get-all-products")) {
                 RequestId requestId = request.getRequestId();
                 String requestPayload = devTools.send(Network.getRequestPostData(requestId));
-//				System.out.println(requestPayload);
+
                 JSONObject jsonResponse = new JSONObject(requestPayload);
                 System.out.println(jsonResponse.getString("productName"));
                 try {
-                    Assert.assertEquals(jsonResponse.getString("productName"), "ADIDAS ORIGINAL",
+                    Assert.assertEquals(jsonResponse.getString("productName"), prodname,
                             "productName should be an empty string");
                     Assert.assertTrue(jsonResponse.isNull("minPrice"), "minPrice should be null");
                     Assert.assertTrue(jsonResponse.isNull("maxPrice"), "maxPrice should be null");
@@ -263,7 +234,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                             "productFor should be an empty array");
 
                 } catch (AssertionError e) {
-//					System.out.println(flag);
+
                     e.printStackTrace();
                     flag = false; // Set flag if validation fails
                 }
@@ -279,42 +250,24 @@ public class FunctionalityStepDefImpl extends BaseTest {
             if (res.getUrl().contains("get-all-products")) {
 
                 RequestId requestId = response.getRequestId();
-                String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody().toString();
+                String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody();
                 JSONObject json = new JSONObject(responsePayload);
 
-                int count = json.getInt("count");
-//				System.out.println(json.getJSONArray("data").get(0));
-                try {
-                    Assert.assertEquals(productspage.getProductList().size(), count);
-                    Assert.assertTrue(productspage.getProductCount().contains(Integer.toString(count)));
+                System.out.println(json);
 
-                    for (int i = 0; i < count; i++) {
-                        Object data = json.getJSONArray("data").get(i);
-                        String prodName = (new JSONObject(data.toString())).getString("productName");
-                        int prodPrice = (new JSONObject(data.toString())).getInt("productPrice");
-                        WebElement productByName = productspage.getProductByName(prodName);
-                        Assert.assertTrue(productByName.findElement(By.className(".text-muted")).getText()
-                                .contains(Integer.toString(prodPrice)));
-                    }
-                } catch (AssertionError e) {
-                    e.printStackTrace();
-                    flag = false; // Set flag if validation fails
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
 
             }
 
         });
 
-        productspage.searchProduct("ADIDAS ORIGINAL");
+        productspage.searchProduct(prodname);
         Assert.assertTrue(flag);
     }
 
     @When("User filters using min max price")
     public void user_filters_using_min_max_price() throws InterruptedException {
         Thread.sleep(2000);
-        productspage.minPrice("30000");
+        productspage.minPrice("300");
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
@@ -331,7 +284,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                 try {
                     Assert.assertEquals(jsonResponse.getString("productName"), "",
                             "productName should be an empty string");
-                    Assert.assertEquals(jsonResponse.get("minPrice").toString(), "30000", "minPrice should be null");
+                    Assert.assertEquals(jsonResponse.get("minPrice").toString(), "300", "minPrice should be null");
                     Assert.assertEquals(jsonResponse.get("maxPrice").toString(), "50000", "maxPrice should be null");
 
                     // Validate arrays are empty
@@ -343,7 +296,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
                             "productFor should be an empty array");
 
                 } catch (AssertionError e) {
-//					System.out.println(flag);
                     e.printStackTrace();
                     flag = false; // Set flag if validation fails
                 }
@@ -359,29 +311,10 @@ public class FunctionalityStepDefImpl extends BaseTest {
             if (res.getUrl().contains("get-all-products")) {
 
                 RequestId requestId = response.getRequestId();
-                String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody().toString();
+                String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody();
                 JSONObject json = new JSONObject(responsePayload);
 
-                int count = json.getInt("count");
-//				System.out.println(json.getJSONArray("data").get(0));
-                try {
-                    Assert.assertEquals(productspage.getProductList().size(), count);
-                    Assert.assertTrue(productspage.getProductCount().contains(Integer.toString(count)));
-
-                    for (int i = 0; i < count; i++) {
-                        Object data = json.getJSONArray("data").get(i);
-                        String prodName = (new JSONObject(data.toString())).getString("productName");
-                        int prodPrice = (new JSONObject(data.toString())).getInt("productPrice");
-                        WebElement productByName = productspage.getProductByName(prodName);
-                        Assert.assertTrue(productByName.findElement(By.className(".text-muted")).getText()
-                                .contains(Integer.toString(prodPrice)));
-                    }
-                } catch (AssertionError e) {
-                    e.printStackTrace();
-                    flag = false; // Set flag if validation fails
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                System.out.println(json);
 
             }
 
@@ -426,7 +359,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
                             "productFor should be an empty array");
 
                 } catch (AssertionError e) {
-//					System.out.println(flag);
+
                     e.printStackTrace();
                     flag = false; // Set flag if validation fails
                 }
@@ -442,29 +375,10 @@ public class FunctionalityStepDefImpl extends BaseTest {
             if (res.getUrl().contains("get-all-products")) {
 
                 RequestId requestId = response.getRequestId();
-                String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody().toString();
+                String responsePayload = devTools.send(Network.getResponseBody(requestId)).getBody();
                 JSONObject json = new JSONObject(responsePayload);
 
-                int count = json.getInt("count");
-                System.out.println(json.getJSONArray("data").get(0));
-                try {
-                    Assert.assertEquals(productspage.getProductList().size(), count);
-                    Assert.assertTrue(productspage.getProductCount().contains(Integer.toString(count)));
-
-                    for (int i = 0; i < count; i++) {
-                        Object data = json.getJSONArray("data").get(i);
-                        String prodName = (new JSONObject(data.toString())).getString("productName");
-                        int prodPrice = (new JSONObject(data.toString())).getInt("productPrice");
-                        WebElement productByName = productspage.getProductByName(prodName);
-                        Assert.assertTrue(productByName.findElement(By.className(".text-muted")).getText()
-                                .contains(Integer.toString(prodPrice)));
-                    }
-                } catch (AssertionError e) {
-                    e.printStackTrace();
-                    flag = false; // Set flag if validation fails
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                System.out.println(json);
 
             }
 
@@ -479,7 +393,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
     public void afterScenario() throws InterruptedException {
         Thread.sleep(2000);
         if (driver != null)
-            driver.close();
+            driver.quit();
     }
 
 

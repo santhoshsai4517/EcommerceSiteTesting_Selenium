@@ -1,9 +1,6 @@
 package StepDefinitions.UITest.ProductsPage;
 
 import BaseTest.BaseTest;
-import PageObjects.CartPage;
-import PageObjects.LoginPage;
-import PageObjects.OrdersPage;
 import PageObjects.ProductsPage;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
@@ -15,23 +12,16 @@ import org.openqa.selenium.devtools.v130.fetch.model.RequestPattern;
 import org.openqa.selenium.devtools.v130.network.model.ErrorReason;
 import org.testng.Assert;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 public class ErrorHandlingStepDefImpl extends BaseTest {
 
     private ProductsPage productspage;
-    private CartPage cart;
-    private OrdersPage orders;
-    private LoginPage login;
-    private boolean flag = true;
-    private int i, k;
 
     @Given("I landed on ECommerece page products page after login")
-    public void i_landed_on_e_commerece_page_products_page_after_login() throws FileNotFoundException, IOException {
+    public void i_landed_on_e_commerece_page_products_page_after_login() throws IOException {
         productspage = launchApplication().loginApplication("santhoshsai4517@gmail.com", "151Fa04124@4517");
     }
 
@@ -40,8 +30,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
-        Optional<List<RequestPattern>> patterns = Optional.of(Arrays
-                .asList(new RequestPattern(Optional.of("*get-all-products*"), Optional.empty(), Optional.empty())));
+        Optional<List<RequestPattern>> patterns = Optional.of(List.of(new RequestPattern(Optional.of("*get-all-products*"), Optional.empty(), Optional.empty())));
 
         devTools.send(Fetch.enable(patterns, Optional.empty()));
 
@@ -72,8 +61,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     public void user_clicks_on_add_to_cart_button() throws InterruptedException {
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
-        Optional<List<RequestPattern>> patterns = Optional.of(Arrays
-                .asList(new RequestPattern(Optional.of("*add-to-cart*"), Optional.empty(), Optional.empty())));
+        Optional<List<RequestPattern>> patterns = Optional.of(List.of(new RequestPattern(Optional.of("*add-to-cart*"), Optional.empty(), Optional.empty())));
 
         devTools.send(Fetch.enable(patterns, Optional.empty()));
 
@@ -92,8 +80,8 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
 
     @After
     public void afterScenario() {
-//		Thread.sleep(2000);
+
         if (driver != null)
-            driver.close();
+            driver.quit();
     }
 }
