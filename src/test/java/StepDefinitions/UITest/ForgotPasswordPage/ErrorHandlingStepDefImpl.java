@@ -177,7 +177,7 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     @After
     public void afterScenario() {
         if (driver != null)
-            driver.close();
+            driver.quit();
     }
 
 

@@ -79,7 +79,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
         //Creating request body for login api request
         LoginAPIRequest requestBody = new LoginAPIRequest();
         requestBody.setUserEmail("s1234@gmail.com");
-        requestBody.setUserPassword("1234");
+        requestBody.setUserPassword("123");
 
         //Sending login api request
         loginResponse = given().spec(requestSpecification).body(requestBody)

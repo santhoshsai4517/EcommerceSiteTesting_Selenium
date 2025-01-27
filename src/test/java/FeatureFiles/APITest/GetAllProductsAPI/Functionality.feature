@@ -15,13 +15,13 @@ Feature: GetAllProducts API functionality
 
       | Name   | min   | max     | cat                           | subcat        | for |
       |        |       |         |                               |               |     |
-      | ADIDAS |       |         |                               |               |     |
+      | IPHONE 13 PRO |       |         |                               |               |     |
       |        | 50000 |         |                               |               |     |
       |        |       | 50000   |                               |               |     |
       |        |       |         | fashion,electronics           |               |     |
       |        |       |         |                               | shoes,mobiles |     |
       |        |       |         |                               |               | men |
-      | ADIDAS | 10000 | 3000000 | fashion,electronics,household | shoes,mobiles | men |
+      | IPHONE 13 PRO | 10000 | 3000000 | fashion,electronics,household | shoes,mobiles | men |
 
   @FunctionalAPI
   Scenario: GetAllProducts API with filters and no products

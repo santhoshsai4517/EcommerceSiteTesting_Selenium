@@ -14,7 +14,7 @@ public class CartPage extends Utility {
     WebDriver driver;
     @FindBy(xpath = "//h1[normalize-space()='My Cart']")
     private WebElement cartText;
-    @FindBy(css = "#toast-container")
+    @FindBy(css = "div[aria-label='No Product in Your Cart']")
     private WebElement noProductsToast;
     @FindBy(css = "button[routerlink='/dashboard']")
     private WebElement continueShoppingBtn;
@@ -26,7 +26,7 @@ public class CartPage extends Utility {
     private WebElement subTotal;
     @FindBy(css = "li:nth-child(2) span:nth-child(2)")
     private WebElement total;
-    @FindBy(css = ".totalRow button")
+    @FindBy(xpath = "//button[normalize-space()='Checkout']")
     private WebElement checkoutBtn;
 
     public CartPage(WebDriver driver) {
