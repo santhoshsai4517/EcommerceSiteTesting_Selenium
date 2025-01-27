@@ -1,4 +1,4 @@
-Feature: Order confirmation Page error handling
+Feature: Orders Page error handling
 
   @ErrorHandling
   Scenario: Orders api is failed

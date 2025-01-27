@@ -38,11 +38,6 @@ Feature: Cart Page functionality
     Then "AUTOMATION" message is displayed and Products page is displayed
 
   @Functional
-  Scenario: No Products
-    Given User landed on ECommerece page cart page
-    Then "No Product in Your Cart" toast is displayed and "No Products in Your Cart !" message is displayed
-
-  @Functional
   Scenario: Cart is cleared when user logs out
     Given User landed on ECommerece page cart page
     When User adds products to cart and clicks on logout

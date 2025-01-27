@@ -86,6 +86,7 @@ public class ProductsPage extends Utility {
     public String addProductToCart(String productName) throws InterruptedException {
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getProductByName(productName).findElement(addToCart));
+        Thread.sleep(2000);
         getProductByName(productName).findElement(addToCart).click();
         waitForElementToAppear(toastContainer);
         try {

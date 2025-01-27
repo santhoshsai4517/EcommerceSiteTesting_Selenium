@@ -19,42 +19,59 @@ import org.openqa.selenium.devtools.v130.network.model.Response;
 import org.testng.Assert;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class FunctionalityStepDefImpl extends BaseTest {
 
-    List<String> products = new ArrayList<String>();
     private LoginPage login;
     private ProductsPage prod;
     private CartPage cart;
     private OrdersPage orders;
     private CheckoutPage checkout;
     private boolean flag = true;
-    private HashMap<String, Integer> prices = new HashMap<String, Integer>();
+    private HashMap<String, String> prodPrices = new HashMap<String, String>();
+    private int noOfProductsToAddToCart = 2;
+    private List<WebElement> products;
 
     @Given("User landed on ECommerece page checkout page")
     public void userLandedOnECommerecePageCheckoutPage() throws IOException, InterruptedException {
-
-        prices.put("adidas", 31500);
-        prices.put("iphone", 231500);
-        prices.put("qwerty", 11500);
-
-        products.add("qwerty");
-        products.add("ADIDAS ORIGINAL");
-        products.add("IPHONE 13 PRO");
 
 
         login = launchApplication();
         prod = login.loginApplication("santhoshsai4517@gmail.com", "151Fa04124@4517");
 
-        prod.addProductToCart(products.get(0).toUpperCase());
+        products = prod.getProductList();
+
+        //Adding products to cart
+        int cartCount;
+        try {
+            cartCount = Integer.parseInt(prod.getCartCount()); // Attempt to parse
+        } catch (NumberFormatException e) {
+            cartCount = 0; // Default to 0 if parsing fails
+        }
+
+        while (cartCount < noOfProductsToAddToCart) {
+            //Generating a random index to get product from products list
+            int index = new Random().nextInt(products.size());
+            String prodName = products.get(index).findElement(By.cssSelector(".card-body h5 b")).getText();
+            String prodPrice = products.get(index).findElement(By.cssSelector(".text-muted")).getText();
+
+            if(!prodPrices.containsKey(prodName.toLowerCase())) {
+                prodPrices.put(prodName.toLowerCase(),prodPrice);
+
+                prod.addProductToCart(prodName);
+            }
+
+            cartCount = Integer.parseInt(prod.getCartCount());
+        }
+
+
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+        Thread.sleep(4000);
 
         cart = prod.gotoCart();
 
-
+        Thread.sleep(2000);
         cart.getCartProducts().get(0).findElement(By.cssSelector(".btn-primary")).click();
 
 
@@ -113,11 +130,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @Then("Verify all product details")
     public void verifyAllProductDetails() throws InterruptedException {
 
-        prod = prod.gotoProductsPage();
-        Thread.sleep(1000);
-        for (String product : products) {
-            prod.addProductToCart(product.toUpperCase());
-        }
 
         cart = prod.gotoCart();
 
@@ -142,8 +154,8 @@ public class FunctionalityStepDefImpl extends BaseTest {
             checkout = new CheckoutPage(driver);
             Assert.assertTrue(driver.getCurrentUrl().contains("https://rahulshettyacademy.com/client/dashboard/order?prop="));
             Assert.assertEquals(checkout.getProductCount(), 1);
-            Assert.assertTrue(checkout.getProductName().equalsIgnoreCase(prodName));
-            Assert.assertEquals(checkout.getProductPrice(), prodPrice);
+            Assert.assertTrue(prodPrices.containsKey(checkout.getProductName().toLowerCase()));
+            Assert.assertEquals(checkout.getProductPrice(), prodPrices.get(checkout.getProductName().toLowerCase()));
 
             // Navigate back to cart
             prod.gotoCart();
@@ -156,11 +168,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @When("User clicks on checkout button")
     public void userClicksOnCheckoutButton() throws InterruptedException {
 
-        prod = prod.gotoProductsPage();
-        Thread.sleep(1000);
-        for (String product : products) {
-            prod.addProductToCart(product.toUpperCase());
-        }
 
         cart = prod.gotoCart();
 
@@ -170,7 +177,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
     @Then("Verify all product details in checkout page")
     public void verifyAllProductDetailsInCheckoutPage() {
-        Assert.assertEquals(checkout.getProductCount(), products.size());
+        Assert.assertEquals(checkout.getProductCount(), noOfProductsToAddToCart);
         List<WebElement> checkoutProducts = checkout.getProductDetails();
 
         for (WebElement checkoutProduct : checkoutProducts) {
@@ -179,8 +186,8 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
 //            System.out.println(prodName + " " + prodPrice);
 
-            Assert.assertTrue(products.contains(prodName));
-            Assert.assertEquals(prodPrice, "$ " + prices.get(prodName.split(" ")[0].toLowerCase()));
+            Assert.assertTrue(prodPrices.containsKey(prodName.toLowerCase()));
+            Assert.assertEquals(prodPrice, prodPrices.get(prodName.toLowerCase()));
         }
 
     }
@@ -189,9 +196,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
     public void userFillsCountryDetailsAndSubmitsOrder() throws InterruptedException {
         prod = prod.gotoProductsPage();
         Thread.sleep(1000);
-        for (String product : products) {
-            prod.addProductToCart(product.toUpperCase());
-        }
 
         cart = prod.gotoCart();
 
@@ -259,6 +263,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @After
     public void afterScenario() {
         if (driver != null)
-            driver.close();
+            driver.quit();
     }
 }

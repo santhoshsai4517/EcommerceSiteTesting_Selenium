@@ -6,6 +6,9 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v130.fetch.Fetch;
 import org.openqa.selenium.devtools.v130.fetch.model.RequestPattern;
@@ -16,31 +19,50 @@ import java.io.IOException;
 import java.util.*;
 
 public class ErrorHandlingStepDefImpl extends BaseTest {
-    List<String> products = new ArrayList<String>();
+
     private LoginPage login;
     private ProductsPage prod;
     private CartPage cart;
-    private OrdersPage orders;
     private CheckoutPage checkout;
-    private boolean flag = true;
-    private HashMap<String, Integer> prices = new HashMap<String, Integer>();
+    private HashMap<String, String> prodPrices = new HashMap<String, String>();
+    private int noOfProductsToAddToCart = 2;
+    private List<WebElement> products;
 
     @Given("User landed on ECommerce page checkout page")
     public void userLandedOnECommercePageCheckoutPage() throws InterruptedException, IOException {
-
-        prices.put("adidas", 31500);
-        prices.put("iphone", 231500);
-        prices.put("qwerty", 11500);
-
-        products.add("qwerty");
-        products.add("ADIDAS ORIGINAL");
-        products.add("IPHONE 13 PRO");
 
 
         login = launchApplication();
         prod = login.loginApplication("santhoshsai4517@gmail.com", "151Fa04124@4517");
 
-        prod.addProductToCart(products.get(0).toUpperCase());
+        products = prod.getProductList();
+
+        //Adding products to cart
+        int cartCount;
+        try {
+            cartCount = Integer.parseInt(prod.getCartCount()); // Attempt to parse
+        } catch (NumberFormatException e) {
+            cartCount = 0; // Default to 0 if parsing fails
+        }
+
+        while (cartCount < noOfProductsToAddToCart) {
+            //Generating a random index to get product from products list
+            int index = new Random().nextInt(products.size());
+            String prodName = products.get(index).findElement(By.cssSelector(".card-body h5 b")).getText();
+            String prodPrice = products.get(index).findElement(By.cssSelector(".text-muted")).getText();
+
+            if(!prodPrices.containsKey(prodName)) {
+                prodPrices.put(prodName,prodPrice);
+
+                prod.addProductToCart(prodName);
+            }
+
+            cartCount = Integer.parseInt(prod.getCartCount());
+        }
+
+
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+        Thread.sleep(4000);
 
         cart = prod.gotoCart();
 
@@ -57,12 +79,6 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     public void messageIsDisplayedAndOrderIsNotSubmitted(String message) {
         Assert.assertEquals(checkout.getErrorText(), message);
         Assert.assertTrue(driver.getCurrentUrl().contains("https://rahulshettyacademy.com/client/dashboard/order?prop"));
-    }
-
-    @After
-    public void afterScenario() {
-        if (driver != null)
-            driver.close();
     }
 
     @When("User clicks on submit button and api is failed")
@@ -89,5 +105,11 @@ public class ErrorHandlingStepDefImpl extends BaseTest {
     public void unknwonMessageIsDisplayedAndOrderIsNotSubmitted(String message) {
         Assert.assertEquals(checkout.getUnknownError(), message);
         Assert.assertTrue(driver.getCurrentUrl().contains("https://rahulshettyacademy.com/client/dashboard/order?prop"));
+    }
+
+    @After
+    public void afterScenario() {
+        if (driver != null)
+            driver.quit();
     }
 }

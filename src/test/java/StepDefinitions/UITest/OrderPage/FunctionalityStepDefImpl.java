@@ -85,6 +85,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @After
     public void afterScenario() {
         if (driver != null)
-            driver.close();
+            driver.quit();
     }
 }

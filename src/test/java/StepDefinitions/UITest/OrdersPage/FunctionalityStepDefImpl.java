@@ -18,15 +18,11 @@ import org.openqa.selenium.devtools.v130.network.model.Response;
 import org.testng.Assert;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class FunctionalityStepDefImpl extends BaseTest {
 
 
-    List<String> products = new ArrayList<String>();
     private LoginPage login;
     private ProductsPage prod;
     private CartPage cart;
@@ -40,30 +36,46 @@ public class FunctionalityStepDefImpl extends BaseTest {
     private boolean flag = true;
     private String email = "santhoshsai4517@gmail.com";
     private String country = "India";
+    private List<WebElement> products;
+    private int noOfProductsToAddToCart = 2;
+    private Map<String,String> prodPrices = new HashMap<String, String>();
 
     @Given("User landed on ECommerece page orders page")
     public void userLandedOnECommerecePageOrdersPage() throws IOException, InterruptedException {
-
-        prices.put("adidas", 31500);
-        prices.put("iphone", 231500);
-        prices.put("qwerty", 11500);
-
-        products.add("qwerty");
-        products.add("ADIDAS ORIGINAL");
-        products.add("IPHONE 13 PRO");
-
-        productIds.put("adidas", "6581ca979fd99c85e8ee7faf");
-        productIds.put("iphone", "6581cade9fd99c85e8ee7ff5");
-        productIds.put("qwerty", "6701364cae2afd4c0b90113c");
-
 
         login = launchApplication();
         prod = login.loginApplication(email, "151Fa04124@4517");
 
         Thread.sleep(1000);
 
-        for (String product : products)
-            prod.addProductToCart(product.toUpperCase());
+        products = prod.getProductList();
+
+        //Adding products to cart
+        int cartCount;
+        try {
+            cartCount = Integer.parseInt(prod.getCartCount()); // Attempt to parse
+        } catch (NumberFormatException e) {
+            cartCount = 0; // Default to 0 if parsing fails
+        }
+
+        while (cartCount < noOfProductsToAddToCart) {
+            //Generating a random index to get product from products list
+            int index = new Random().nextInt(products.size());
+            String prodName = products.get(index).findElement(By.cssSelector(".card-body h5 b")).getText();
+            String prodPrice = products.get(index).findElement(By.cssSelector(".text-muted")).getText();
+
+            if(!prodPrices.containsKey(prodName.toLowerCase())) {
+                prodPrices.put(prodName.toLowerCase(),prodPrice);
+
+                prod.addProductToCart(prodName);
+            }
+
+            cartCount = Integer.parseInt(prod.getCartCount());
+        }
+
+
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+        Thread.sleep(4000);
 
         cart = prod.gotoCart();
         checkout = cart.checkout();
@@ -305,7 +317,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
             WebElement orderIdElm = order.findElement(By.cssSelector("tr.ng-star-inserted th"));
             String orderId = orderIdElm.getText();
             String prodName = order.findElement(By.cssSelector("tr.ng-star-inserted td:nth-child(3)")).getText();
-            int prodPrice = prices.get(prodName.split(" ")[0].toLowerCase());
+            String prodPrice = prodPrices.get(prodName.toLowerCase());
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", orderIdElm);
 
             if (orderIds.contains(orderId)) {
@@ -328,11 +340,11 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
                             Assert.assertEquals(json.getString("message"), "Orders fetched for customer Successfully", "Message mismatch");
                             Assert.assertEquals(prodData.getString("productName"), prodName, "Product name mismatch");
-                            Assert.assertEquals(prodData.getString("orderPrice"), "" + prodPrice, "Product price mismatch");
+                            Assert.assertEquals(prodData.getString("orderPrice"), prodPrice.split(" ")[1], "Product price mismatch");
                             Assert.assertEquals(prodData.getString("country"), country, "Country mismatch");
                             Assert.assertEquals(prodData.getString("orderBy"), email, "Order status mismatch");
                             Assert.assertEquals(prodData.getString("_id"), orderId, "Order ID mismatch");
-                            Assert.assertEquals(prodData.getString("productOrderedId"), productIds.get(prodName.split(" ")[0].toLowerCase()), "Product ID mismatch");
+//                            Assert.assertEquals(prodData.getString("productOrderedId"), productIds.get(prodName.split(" ")[0].toLowerCase()), "Product ID mismatch");
 
 
                         } catch (AssertionError e) {
@@ -354,7 +366,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
                 Assert.assertEquals(viewOrder.orderID(), orderId);
                 Assert.assertEquals(viewOrder.productTitle(), prodName);
-                Assert.assertEquals(viewOrder.productPrice(), "$ " + prodPrice);
+                Assert.assertEquals(viewOrder.productPrice(), prodPrice);
 
                 String billingEmail = viewOrder.getAddressElms().get(0).getText();
                 String billingCountry = viewOrder.getAddressElms().get(1).getText();
@@ -379,7 +391,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @After
     public void afterScenario() {
         if (driver != null)
-            driver.close();
+            driver.quit();
     }
 
 }

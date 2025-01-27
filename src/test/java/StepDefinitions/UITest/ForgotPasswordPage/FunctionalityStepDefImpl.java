@@ -84,7 +84,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
         Assert.assertEquals(login.getPasswordUpdateText(), message);
         Assert.assertEquals(driver.getCurrentUrl(), "https://rahulshettyacademy.com/client/auth/login");
         Thread.sleep(3000);
-        ProductsPage productspage = login.loginApplication("s1234@gmail.com", "123456");
+        ProductsPage productspage = login.loginApplication("s1234@gmail.com", "123");
         Assert.assertEquals(login.getSuccessText(), "Login Successfully");
         Assert.assertEquals(productspage.getTitleText(), "AUTOMATION");
         Assert.assertEquals(driver.getCurrentUrl(), "https://rahulshettyacademy.com/client/dashboard/dash");
@@ -94,7 +94,7 @@ public class FunctionalityStepDefImpl extends BaseTest {
     @After
     public void afterScenario() {
         if (driver != null)
-            driver.close();
+            driver.quit();
     }
 
 }

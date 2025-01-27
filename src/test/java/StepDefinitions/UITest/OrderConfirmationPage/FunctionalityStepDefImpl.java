@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v130.network.Network;
@@ -18,38 +19,24 @@ import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class FunctionalityStepDefImpl extends BaseTest {
 
-    List<String> products = new ArrayList<String>();
     private LoginPage login;
     private ProductsPage prod;
     private CartPage cart;
     private OrdersPage orders;
     private CheckoutPage checkout;
     private HashMap<String, Integer> prices = new HashMap<String, Integer>();
-    private HashMap<String, String> productIds = new HashMap<String, String>();
     private OrderConfirmationPage confirmation;
     private List<String> orderIds = new ArrayList<String>();
+    private HashMap<String, String> prodPrices = new HashMap<String, String>();
+    private int noOfProductsToAddToCart = 2;
+    private List<WebElement> products;
 
     @Given("User landed on ECommerece page order confirmation page")
     public void userLandedOnECommerecePageOrderConfirmationPage() throws IOException, InterruptedException {
-
-        prices.put("adidas", 31500);
-        prices.put("iphone", 231500);
-        prices.put("qwerty", 11500);
-
-        products.add("qwerty");
-        products.add("ADIDAS ORIGINAL");
-        products.add("IPHONE 13 PRO");
-
-        productIds.put("adidas", "6581ca979fd99c85e8ee7faf");
-        productIds.put("iphone", "6581cade9fd99c85e8ee7ff5");
-        productIds.put("qwerty", "6701364cae2afd4c0b90113c");
 
 
         login = launchApplication();
@@ -57,8 +44,34 @@ public class FunctionalityStepDefImpl extends BaseTest {
 
         Thread.sleep(1000);
 
-        for (String product : products)
-            prod.addProductToCart(product.toUpperCase());
+        products = prod.getProductList();
+
+        //Adding products to cart
+        int cartCount;
+        try {
+            cartCount = Integer.parseInt(prod.getCartCount()); // Attempt to parse
+        } catch (NumberFormatException e) {
+            cartCount = 0; // Default to 0 if parsing fails
+        }
+
+        while (cartCount < noOfProductsToAddToCart) {
+            //Generating a random index to get product from products list
+            int index = new Random().nextInt(products.size());
+            String prodName = products.get(index).findElement(By.cssSelector(".card-body h5 b")).getText();
+            String prodPrice = products.get(index).findElement(By.cssSelector(".text-muted")).getText();
+
+            if(!prodPrices.containsKey(prodName.toLowerCase())) {
+                prodPrices.put(prodName.toLowerCase(),prodPrice);
+
+                prod.addProductToCart(prodName);
+            }
+
+            cartCount = Integer.parseInt(prod.getCartCount());
+        }
+
+
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+        Thread.sleep(4000);
 
         cart = prod.gotoCart();
         checkout = cart.checkout();
@@ -145,12 +158,6 @@ public class FunctionalityStepDefImpl extends BaseTest {
         orders = confirmation.clickOrdersLink();
     }
 
-    @After
-    public void afterScenario() {
-        if (driver != null)
-            driver.close();
-    }
-
     @Then("Validate product details,order id,url")
     public void validateProductDetailsOrderIdUrl() {
 
@@ -164,8 +171,8 @@ public class FunctionalityStepDefImpl extends BaseTest {
             String prodName = order.findElements(By.cssSelector(("td div.title"))).get(0).getText();
             String prodPrice = order.findElements(By.cssSelector(("td div.title"))).get(1).getText();
 //            System.out.println(prodName + " " + prodPrice);
-            Assert.assertTrue(products.contains(prodName));
-            Assert.assertEquals(prices.get(prodName.split(" ")[0].toLowerCase()), Integer.parseInt(prodPrice.split(" ")[1]));
+            Assert.assertTrue(prodPrices.containsKey(prodName.toLowerCase()));
+            Assert.assertEquals(prodPrices.get(prodName.toLowerCase()),prodPrice);
         }
 
         List<WebElement> Ids = confirmation.getOrderIds();
@@ -186,11 +193,17 @@ public class FunctionalityStepDefImpl extends BaseTest {
             Thread.sleep(1000);
             File file = null;
             if (button.getText().contains("CSV"))
-                file = new File("C:\\Users\\santh\\Desktop\\Ecommerce Automation\\Selenium\\EcommercePractise\\Downloads" + "/order-invoice_santhoshsai4517.csv"); // Replace with your expected file name
+                file = new File("Downloads" + "/order-invoice_santhoshsai4517.csv"); // Replace with your expected file name
             else if (button.getText().contains("Excel"))
-                file = new File("C:\\Users\\santh\\Desktop\\Ecommerce Automation\\Selenium\\EcommercePractise\\Downloads" + "/order-invoice_santhoshsai4517.xlsx"); // Replace with your expected file name
+                file = new File("Downloads" + "/order-invoice_santhoshsai4517.xlsx"); // Replace with your expected file name
             Assert.assertTrue(file.exists());
         }
+    }
+
+    @After
+    public void afterScenario() {
+        if (driver != null)
+            driver.quit();
     }
 
 
